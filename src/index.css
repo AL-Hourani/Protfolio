@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 212 31% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 29% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 29% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 212 100% 51%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 215 21% 18%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 215 21% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 21% 18%;
+    --input: 215 21% 18%;
+    --ring: 212 100% 51%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-github-dark text-github-text;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html[dir="rtl"] body {
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-github-darker;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-github-medium rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted;
+  }
+
+  /* Section styling */
+  section {
+    @apply py-20;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .container {
+    @apply px-4 md:px-6;
+  }
+}
+
+.three-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-content {
+  @apply relative z-10;
+}
+
+.btn-primary {
+  @apply bg-github-blue hover:bg-opacity-80 text-white font-medium py-2 px-6 rounded transition-all;
+}
+
+.card {
+  @apply bg-github-medium border border-muted p-6 rounded-lg hover:border-github-accent transition-all duration-300;
+}
+
+/* RTL Specific Styling */
+html[dir="rtl"] .icon-arrow-right {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"] button.has-arrow-icon svg:last-child {
+  transform: rotate(180deg);
+}
