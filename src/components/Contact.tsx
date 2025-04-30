@@ -23,10 +23,10 @@ const Contact = () => {
     
     try {
       const result = await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_q75w7jv', // Replace with your EmailJS service ID
+        'template_5jtlj7a', // Replace with your EmailJS template ID
         form.current,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'rJIyvHjP0nGFgau1X' // Replace with your EmailJS public key
       );
 
       if (result.text === 'OK') {
@@ -121,7 +121,7 @@ const Contact = () => {
                   </label>
                   <Input
                     id="user_name"
-                    name="user_name"
+                    name="from_name"
                     className="bg-github-dark border-github-dark"
                     required
                   />
@@ -140,8 +140,8 @@ const Contact = () => {
                   />
                 </div>
                 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                {/* <div> */}
+                  {/* <label htmlFor="subject" className="block text-sm font-medium mb-1">
                     {t('contact.subject')}
                   </label>
                   <Input
@@ -150,7 +150,7 @@ const Contact = () => {
                     className="bg-github-dark border-github-dark"
                     required
                   />
-                </div>
+                </div> */}
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-1">

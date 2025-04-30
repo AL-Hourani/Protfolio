@@ -51,9 +51,11 @@ const About = () => {
               </div>
               
               <div className="pt-4">
-                <Button variant="outline" className="border-github-accent text-github-accent hover:bg-github-accent hover:bg-opacity-10 flex gap-2">
-                  <FileDown size={18} /> {t('about.downloadResume')}
-                </Button>
+                <a href="/cv.pdf" download>
+                  <Button variant="outline" className="border-github-accent text-github-accent hover:bg-github-accent hover:bg-opacity-10 flex gap-2">
+                    <FileDown size={18} /> {t('about.downloadResume')}
+                  </Button>
+                </a>
               </div>
             </div>
             
