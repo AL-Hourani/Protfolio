@@ -16,33 +16,20 @@ const Education = () => {
   
   const educationItems: Education[] = [
     {
-      degree: t('education.masters'),
-      institution: t('education.mastersInstitution'),
-      year: '2020 - 2022',
-      description: t('education.mastersDescription'),
+      degree:"Experience",
+      institution:"Learning" ,
+      year: '2019 - 2025',
+      description:" With 5 years of hands-on experience in web design, I have recently expanded my skill set by diving into the field of artificial intelligence, which I’ve been studying for approximately a year now",
       type: 'degree'
     },
     {
       degree: t('education.bachelors'),
       institution: t('education.bachelorsInstitution'),
-      year: '2016 - 2020',
+      year: '2020 - 2025',
       description: t('education.bachelorsDescription'),
       type: 'degree'
     },
-    {
-      degree: t('education.certification1'),
-      institution: t('education.certification1Institution'),
-      year: '2023',
-      description: t('education.certification1Description'),
-      type: 'certificate'
-    },
-    {
-      degree: t('education.certification2'),
-      institution: t('education.certification2Institution'),
-      year: '2022',
-      description: t('education.certification2Description'),
-      type: 'certificate'
-    }
+
   ];
 
   return (
@@ -76,8 +63,8 @@ const Education = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className={`w-full  md:w-1/2 ${index % 2 === 0 ? 'md:pl-0 md:pr-12' : 'md:pr-0 md:pl-12'} pl-10`}>
-                    <Card className="bg-github-medium/80 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all overflow-hidden group">
+                  <div className={`w-full  md:w-1/2  ${index % 2 === 0 ? 'ml-10 md:pl-0 md:pr-12' : ' mr-10 md:pr-0 md:pl-12'} pl-10`}>
+                    <Card className="bg-github-medium/80  backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all overflow-hidden group">
                       <div className="p-6">
                         <div className="text-sm text-github-accent font-medium mb-2">{item.year}</div>
                         <h3 className="text-xl font-bold mb-1 group-hover:text-github-accent transition-colors">

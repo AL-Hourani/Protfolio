@@ -18,6 +18,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 order-2 md:order-1">
               <h3 className="text-2xl font-bold text-github-accent">{t('about.whoAmI')}</h3>
+              <h3 className="text-xl font-bold text-github-accent">{t('about.name')}</h3>
               <p className="text-github-text opacity-90 leading-relaxed">
                 {t('about.description1')}
               </p>
@@ -51,7 +52,7 @@ const About = () => {
               </div>
               
               <div className="pt-4">
-                <a href="/cv.pdf" download>
+                <a href="/public/Jaafar_AlHourani_CV.pdf" download>
                   <Button variant="outline" className="border-github-accent text-github-accent hover:bg-github-accent hover:bg-opacity-10 flex gap-2">
                     <FileDown size={18} /> {t('about.downloadResume')}
                   </Button>

@@ -97,7 +97,7 @@ const Footer = () => {
                     href="mailto:hello@example.com"
                     className="hover:text-github-accent transition-colors"
                   >
-                    hello@example.com
+                    jaafar.alhourani.2002@gmail.com
                   </a>
                 </p>
                 <p>

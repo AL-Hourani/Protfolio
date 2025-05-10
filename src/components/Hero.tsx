@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="pt-16 animate-fade-in" style={{ animationDelay: '1s' }}>
             <p className="text-github-text opacity-70 mb-3">{t('hero.techStack')}</p>
             <div className="flex flex-wrap justify-center gap-6">
-              {['React', 'TypeScript', 'Node.js', 'Three.js', 'Tailwind'].map((tech) => (
+              {['React', 'TypeScript', 'Node.js', 'Three.js', 'Tailwind' , 'go' , 'API' , 'AI' , 'Database' , 'Python' ,'Java' ,'JavaScript'].map((tech) => (
                 <div key={tech} className="px-4 py-2 bg-github-medium rounded-lg text-github-text">
                   {tech}
                 </div>

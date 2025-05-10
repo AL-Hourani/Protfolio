@@ -31,6 +31,7 @@ i18n
           about: {
             title: 'About Me',
             whoAmI: 'Who am I?',
+            name: "I'm Jaafar Abdo AL-Hourani",
             description1: "I'm a passionate Full Stack Developer with a love for creating elegant solutions to complex problems. With over 5 years of experience in web development, I specialize in building responsive and interactive applications using modern JavaScript frameworks and libraries.",
             description2: 'My journey in software development began with a curiosity about how things work online. That curiosity evolved into a passion for crafting digital experiences that are not only functional but also aesthetically pleasing and user-friendly.',
             approach: 'My approach:',
@@ -67,7 +68,7 @@ i18n
             mastersDescription: 'Specialized in artificial intelligence and web technologies with research focus on interactive web applications',
             bachelors: 'Bachelor of Science in Software Engineering',
             bachelorsInstitution: 'MIT',
-            bachelorsDescription: 'Graduated with honors, specializing in software architecture and design patterns',
+            bachelorsDescription: 'I’m currently in my final year of studying Software Engineering at the University of Homs, with graduation expected in approximately five months',
             certification1: 'AWS Certified Solutions Architect',
             certification1Institution: 'Amazon Web Services',
             certification1Description: 'Professional certification in designing distributed systems on AWS',
@@ -140,6 +141,7 @@ i18n
           about: {
             title: 'نبذة عني',
             whoAmI: 'من أنا؟',
+            name: 'أنا جعفر عبدو الحوراني',
             description1: 'أنا مطور ويب متكامل شغوف بإنشاء حلول أنيقة للمشكلات المعقدة. مع خبرة تزيد عن 5 سنوات في تطوير الويب، أتخصص في بناء تطبيقات تفاعلية ومتجاوبة باستخدام أطر عمل جافا سكريبت الحديثة.',
             description2: 'بدأت رحلتي في تطوير البرمجيات بفضول حول كيفية عمل الأشياء عبر الإنترنت. تطور هذا الفضول إلى شغف بتصميم تجارب رقمية ليست وظيفية فحسب، بل جذابة بصرياً وسهلة الاستخدام.',
             approach: 'منهجي:',

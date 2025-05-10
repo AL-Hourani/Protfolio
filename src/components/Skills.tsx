@@ -11,6 +11,7 @@ const skills: Skill[] = [
   { name: 'Three.js', level: 70, category: 'frontend' },
   
   // Backend Skills
+  { name: 'Golang', level: 90, category: 'backend' },
   { name: 'Node.js', level: 80, category: 'backend' },
   { name: 'Express', level: 75, category: 'backend' },
   { name: 'MongoDB', level: 70, category: 'backend' },
@@ -18,17 +19,17 @@ const skills: Skill[] = [
   { name: 'REST API', level: 85, category: 'backend' },
   
   // AI Skills
-  { name: 'Machine Learning', level: 75, category: 'ai' },
-  { name: 'TensorFlow', level: 70, category: 'ai' },
-  { name: 'PyTorch', level: 65, category: 'ai' },
-  { name: 'Natural Language Processing', level: 80, category: 'ai' },
-  { name: 'Computer Vision', level: 70, category: 'ai' },
-  { name: 'OpenAI Integration', level: 85, category: 'ai' },
+  { name: 'Machine Learning', level: 60, category: 'ai' },
+  { name: 'TensorFlow', level: 0, category: 'ai' },
+  { name: 'PyTorch', level: 10, category: 'ai' },
+  { name: 'Natural Language Processing', level: 10, category: 'ai' },
+  { name: 'Computer Vision', level: 20, category: 'ai' },
+  { name: 'OpenAI Integration', level: 0, category: 'ai' },
   
   // Tools
   { name: 'Git & GitHub', level: 85, category: 'tools' },
   { name: 'Docker', level: 60, category: 'tools' },
-  { name: 'AWS', level: 55, category: 'tools' },
+  { name: 'AWS', level: 0, category: 'tools' },
   { name: 'Figma', level: 70, category: 'tools' },
 ];
 

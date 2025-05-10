@@ -2,7 +2,13 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
-import imgurl from "../../public/images/Screenshot (226).png"
+import imgurl from "../../public/images/im1.png"
+import imgurl2 from "../../public/images/im2.png"
+import imgurA from "../../public/images/imgA.png"
+import imgurD from "../../public/images/imgD.png"
+import imgurC from "../../public/images/imgC.png"
+import imgurP from "../../public/images/imgP.png"
+import imgurF from "../../public/images/imgF.jpg"
 
 type Project = {
   title: string;
@@ -16,33 +22,42 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Diabetes Care Center Managment",
-    description: "A personal portfolio website with 3D animations using Three.js and React. Features a responsive design with smooth scrolling and modern UI.",
-    tags: ["React", "shadcn", "Tailwind CSS"],
-    image: imgurl,
+    description: "This is a full-stack project consisting of a website and desktop application designed for managing diabetic patients. The platform allows healthcare professionals to record patient cases, monitor their health status over time, and provide personalized care.A key feature of the system is its integration with artificial intelligence, which analyzes medical test results to assist in diagnosis and provide early warnings. The AI model is trained to read and interpret lab reports, helping doctors make faster and more informed decisions.The project aims to enhance chronic disease management through intelligent automation, data-driven insights, and seamless user experience for both medical staff and patients.",
+    tags: ["React", "shadcn", "Tailwind CSS" , "golang", "API" , "ML" , "Postgres"],
+    image: imgurF,
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+
+  {
+    title: "helps doctors",
+    description: "A smart application that helps doctors manage diabetic patients by tracking medical records, analyzing test results using AI, and receiving real-time alerts for critical health changes. It simplifies patient monitoring and improves decision-making through intelligent insights.",
+    tags: ["JavaScript", "API", "CSS" ,"React"],
+    image: imgurA,
     githubUrl: "#",
     liveUrl: "#",
   },
   {
-    title: "E-Commerce Dashboard",
-    description: "An admin dashboard for e-commerce platforms with sales analytics, inventory management, and customer insights. Built with React and Chart.js.",
-    tags: ["React", "TypeScript", "Chart.js"],
-    image: "https://source.unsplash.com/random/600x400/?dashboard,admin",
-    githubUrl: "#",
-    liveUrl: "#",
-  },
-  {
-    title: "Weather App",
-    description: "A beautiful weather application that shows current weather and forecasts. Features location-based weather data and animated UI elements.",
-    tags: ["JavaScript", "API", "CSS"],
-    image: "https://source.unsplash.com/random/600x400/?weather,cloud",
-    githubUrl: "#",
-    liveUrl: "#",
-  },
-  {
-    title: "Task Management System",
-    description: "A full-stack task management application with user authentication, task categorization, and progress tracking features.",
+    title: "Official Download",
+    description: "This website provides secure and direct downloads for the Smart Diabetes Management App on both desktop and mobile platforms. Stay updated with the latest versions and get started in seconds.",
     tags: ["React", "Node.js", "MongoDB"],
-    image: "https://source.unsplash.com/random/600x400/?task,management",
+    image: imgurD,
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    title: "Pharmacy Management App",
+    description: "A smart and easy-to-use system for pharmacy inventory, prescription tracking, sales reports, and medicine expiration monitoring. Designed to help pharmacists streamline operations, ensure stock accuracy, and serve patients more efficiently",
+    tags: ["React", "Laravel", "MongoDB"],
+    image: imgurP,
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    title: "Public Transport Management App",
+    description: "A real-time system for managing and tracking buses, routes, schedules, and passenger flow. Designed for transit operators to optimize routes, monitor vehicle locations, reduce delays, and enhance commuter experience.",
+    tags: ["React", "Node.js", "MYSql", "Socket" , "GPS"],
+    image: imgurC,
     githubUrl: "#",
     liveUrl: "#",
   },
@@ -68,7 +83,7 @@ const Projects = () => {
               key={index} 
               className="overflow-hidden border-github-medium bg-github-medium hover:border-github-accent transition-all duration-300 group"
             >
-              <div className="aspect-video w-full overflow-hidden bg-github-darker">
+              <div className="aspect-video w-full h-[32rem]  overflow-hidden bg-github-darker">
                 <img 
                   src={project.image} 
                   alt={project.title} 

@@ -25,16 +25,16 @@ const Languages = () => {
     },
     {
       name: t('languages.french'),
-      level: 60,
+      level: 0,
       certificate: 'DELF B2'
     },
     {
       name: t('languages.spanish'),
-      level: 40
+      level: 0
     },
     {
       name: t('languages.german'),
-      level: 25
+      level: 0
     }
   ];
 
@@ -74,7 +74,7 @@ const Languages = () => {
               </div>
             </div>
             
-            <div className="md:w-7/12 space-y-6">
+            <div className="md:w-7/12 w-full space-y-6">
               {languages.map((language, index) => (
                 <div key={index} className="backdrop-blur-sm bg-github-medium/30 border border-github-accent/10 p-6 rounded-lg">
                   <div className="flex justify-between mb-2">
