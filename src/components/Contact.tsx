@@ -64,7 +64,7 @@ const Contact = () => {
                   <div>
                     <h4 className="text-sm font-medium text-github-text opacity-70">{t('contact.email')}</h4>
                     <a href="mailto:jaafar.alhourani.2002@gmail.com" className="text-github-accent hover:underline">
-                        jaafar.alhourani.2002@gmail.com
+                        jalhourani3@gmail.com
                     </a>
                   </div>
                 </div>

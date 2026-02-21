@@ -23,19 +23,8 @@ const Languages = () => {
       level: 85,
       certificate: 'TOEFL 110/120'
     },
-    {
-      name: t('languages.french'),
-      level: 0,
-      certificate: 'DELF B2'
-    },
-    {
-      name: t('languages.spanish'),
-      level: 0
-    },
-    {
-      name: t('languages.german'),
-      level: 0
-    }
+
+
   ];
 
   return (

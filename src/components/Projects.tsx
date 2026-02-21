@@ -1,71 +1,82 @@
-
 import { ExternalLink, Github } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
-import imgurl from "../../public/images/im1.png"
-import imgurl2 from "../../public/images/im2.png"
-import imgurA from "../../public/images/imgA.png"
-import imgurD from "../../public/images/imgD.png"
-import imgurC from "../../public/images/imgC.png"
-import imgurP from "../../public/images/imgP.png"
-import imgurF from "../../public/images/imgF.jpg"
+import { useState } from 'react';
+import ipo from "../../public/images/po.png"
+import ipot from "../../public/images/poo.png"
+import ipor from "../../public/images/pth.png"
+import ipof from "../../public/images/pfor.png"
+import ipov from "../../public/images/pfiv.png"
+import ipx from "../../public/images/px.png"
+import ipe from "../../public/images/psv.png"
+
+import im1 from "../../public/images/صورة2.png"
+import im2 from "../../public/images/صورة3.png"
+import im3 from "../../public/images/صورة7.png"
+import im4 from "../../public/images/صورة8.png"
+import im5 from "../../public/images/صورة10.png"
+import im6 from "../../public/images/صورة11.png"
+import im7 from "../../public/images/صورة12.png"
+import im8 from "../../public/images/صورة13.png"
+import im9 from "../../public/images/صورة14.png"
+import im10 from "../../public/images/صورة15.png"
+import im11 from "../../public/images/صورة16.png"
+import im12 from "../../public/images/صورة18.png"
+import im13 from "../../public/images/صورة20.png"
+import im14 from "../../public/images/صورة21.png"
+
 
 type Project = {
   title: string;
   description: string;
   tags: string[];
-  image: string;
+  images: string[];
   githubUrl: string;
   liveUrl: string;
+  status?: 'live' | 'in-progress';
 };
 
 const projects: Project[] = [
+
   {
-    title: "Diabetes Care Center Managment",
-    description: "This is a full-stack project consisting of a website and desktop application designed for managing diabetic patients. The platform allows healthcare professionals to record patient cases, monitor their health status over time, and provide personalized care.A key feature of the system is its integration with artificial intelligence, which analyzes medical test results to assist in diagnosis and provide early warnings. The AI model is trained to read and interpret lab reports, helping doctors make faster and more informed decisions.The project aims to enhance chronic disease management through intelligent automation, data-driven insights, and seamless user experience for both medical staff and patients.",
-    tags: ["React", "shadcn", "Tailwind CSS" , "golang", "API" , "ML" , "Postgres"],
-    image: imgurF,
+    title: "service health monitor (VIGIL)",
+    description: "A monitoring system built with Go for tracking the availability and performance of critical services. Provides real-time alerts, logs, and dashboards to ensure system reliability and rapid issue resolution.",
+    tags: ["React", "python", "Golang"],
+    images: [ipo , ipe , ipot , ipof , ipx , ipov],
     githubUrl: "#",
     liveUrl: "#",
+    status: "in-progress"
   },
 
   {
-    title: "helps doctors",
-    description: "A smart application that helps doctors manage diabetic patients by tracking medical records, analyzing test results using AI, and receiving real-time alerts for critical health changes. It simplifies patient monitoring and improves decision-making through intelligent insights.",
-    tags: ["JavaScript", "API", "CSS" ,"React"],
-    image: imgurA,
+    title: "National Diabetes Program (NDP)",
+    description: "A comprehensive platform designed to support the registration, management, and monitoring of diabetic patients.",
+    tags: ["React", "Golang"],
+    images: [im1 , im2 , im3 , im4 , im5 , im6 , im7 ,im8 , im9 , im10 , im11 , im12 , im13 , im14],
     githubUrl: "#",
     liveUrl: "#",
+    status: "live"
   },
-  {
-    title: "Official Download",
-    description: "This website provides secure and direct downloads for the Smart Diabetes Management App on both desktop and mobile platforms. Stay updated with the latest versions and get started in seconds.",
-    tags: ["React", "Node.js", "MongoDB"],
-    image: imgurD,
-    githubUrl: "#",
-    liveUrl: "#",
-  },
-  {
-    title: "Pharmacy Management App",
-    description: "A smart and easy-to-use system for pharmacy inventory, prescription tracking, sales reports, and medicine expiration monitoring. Designed to help pharmacists streamline operations, ensure stock accuracy, and serve patients more efficiently",
-    tags: ["React", "Laravel", "MongoDB"],
-    image: imgurP,
-    githubUrl: "#",
-    liveUrl: "#",
-  },
-  {
-    title: "Public Transport Management App",
-    description: "A real-time system for managing and tracking buses, routes, schedules, and passenger flow. Designed for transit operators to optimize routes, monitor vehicle locations, reduce delays, and enhance commuter experience.",
-    tags: ["React", "Node.js", "MYSql", "Socket" , "GPS"],
-    image: imgurC,
-    githubUrl: "#",
-    liveUrl: "#",
-  },
+
+
 ];
 
 const Projects = () => {
   const { t } = useTranslation();
-  
+
+
+  // لكل مشروع نخزن الصورة الحالية
+  const [currentImageIndex, setCurrentImageIndex] = useState<Record<string, number>>(
+    projects.reduce((acc, project) => {
+      acc[project.title] = 0;
+      return acc;
+    }, {} as Record<string, number>)
+  );
+
+  const handleDotClick = (projectTitle: string, index: number) => {
+    setCurrentImageIndex((prev) => ({ ...prev, [projectTitle]: index }));
+  };
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto section-content">
@@ -76,54 +87,80 @@ const Projects = () => {
           </p>
           <div className="h-1 w-20 bg-github-accent mx-auto mt-4"></div>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+        <div className="grid md:grid-cols-1 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden border-github-medium bg-github-medium hover:border-github-accent transition-all duration-300 group"
+            <Card
+              key={index}
+              className="overflow-hidden border-github-medium bg-github-medium hover:border-github-accent transition-all duration-300 group relative"
             >
-              <div className="aspect-video w-full h-[32rem]  overflow-hidden bg-github-darker">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              {/* حالة المشروع */}
+              {project.status && (
+                <span className={`absolute top-2 right-2 px-2 py-1 text-xs rounded 
+                  ${project.status === 'live' ? 'bg-green-500' : 'bg-yellow-500'} text-white`}>
+                  {project.status === 'live' ? 'Live' : 'In Progress'}
+                </span>
+              )}
+
+              {/* عرض الصور */}
+              <div className="flex gap-2 overflow-x-auto py-4 px-2 bg-github-darker">
+                {project.images.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`${project.title} screenshot ${i+1}`}
+                    className="object-cover rounded-lg flex-shrink-0"
+                  />
+                ))}
               </div>
-              
+
+                  {/* Dots */}
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
+              {project.images.map((_, i) => (
+                <span
+                  key={i}
+                  className={`w-3 h-3 rounded-full cursor-pointer transition-colors ${
+                    currentImageIndex[project.title] === i ? 'bg-github-accent' : 'bg-github-dark'
+                  }`}
+                  onClick={() => handleDotClick(project.title, i)}
+                />
+              ))}
+            </div>
+
+              {/* محتوى المشروع */}
               <div className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold group-hover:text-github-accent transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-sm text-github-text opacity-80 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tags.map((tag, i) => (
-                    <span 
-                      key={i} 
+                    <span
+                      key={i}
                       className="text-xs px-2 py-1 rounded bg-github-dark text-github-accent"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center pt-4 gap-4">
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-github-text hover:text-github-accent transition-colors flex items-center gap-1 text-sm"
                   >
                     <Github size={16} />
                     {t('projects.viewCode')}
                   </a>
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-github-text hover:text-github-accent transition-colors flex items-center gap-1 text-sm"
                   >
@@ -135,9 +172,9 @@ const Projects = () => {
             </Card>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
-          <a 
+          <a
             href="#"
             className="inline-flex items-center gap-2 text-github-accent hover:underline"
           >

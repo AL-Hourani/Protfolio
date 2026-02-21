@@ -20,16 +20,15 @@ const skills: Skill[] = [
   
   // AI Skills
   { name: 'Machine Learning', level: 60, category: 'ai' },
-  { name: 'TensorFlow', level: 0, category: 'ai' },
+
   { name: 'PyTorch', level: 10, category: 'ai' },
-  { name: 'Natural Language Processing', level: 10, category: 'ai' },
+
   { name: 'Computer Vision', level: 20, category: 'ai' },
-  { name: 'OpenAI Integration', level: 0, category: 'ai' },
+
   
   // Tools
   { name: 'Git & GitHub', level: 85, category: 'tools' },
   { name: 'Docker', level: 60, category: 'tools' },
-  { name: 'AWS', level: 0, category: 'tools' },
   { name: 'Figma', level: 70, category: 'tools' },
 ];
 
