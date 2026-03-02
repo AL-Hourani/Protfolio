@@ -71,7 +71,7 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">{t('footer.services')}</h4>
               <ul className="space-y-2">
                 {[
-                  { key: 'webDev', text: t('footer.webDev') },
+                  { key: 'machineLearning', text: t('footer.machineLearning') },
                   { key: 'frontendDev', text: t('footer.frontendDev') },
                   { key: 'backendDev', text: t('footer.backendDev') },
                   { key: 'uiUxDesign', text: t('footer.uiUxDesign') }

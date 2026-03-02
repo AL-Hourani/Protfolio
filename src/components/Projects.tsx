@@ -24,6 +24,28 @@ import im11 from "../../public/images/صورة16.png"
 import im12 from "../../public/images/صورة18.png"
 import im13 from "../../public/images/صورة20.png"
 import im14 from "../../public/images/صورة21.png"
+import LRS from "../../public/images/lrs.png"
+import LRS2 from "../../public/images/lrs2.png"
+import LOS from "../../public/images/Los.png"
+import LOS1 from "../../public/images/los1.png"
+import LOS2 from "../../public/images/los2.png"
+import SVM from "../../public/images/svm.png"
+import SVM1 from "../../public/images/svm1.png"
+import kmeans from "../../public/images/kmeans.png"
+import kmeans1 from "../../public/images/kmeans1.png"
+import Heart1 from "../../public/images/Heart1.png"
+import Heart2 from "../../public/images/Heart2.png"
+import Heart3 from "../../public/images/Heart3.png"
+import Heart4 from "../../public/images/Heart4.png"
+import Heart6 from "../../public/images/Heart6.png"
+import lstm from "../../public/images/lstm.png"
+import lstm1 from "../../public/images/lstm1.png"
+import housePDL from "../../public/images/predicthoseDL.png"
+import housePDL1 from "../../public/images/predicthoueDL.png"
+import heratD from "../../public/images/heratD.png"
+import heratD1 from "../../public/images/heratD1.png"
+import heratD2 from "../../public/images/heratD2.png"
+import heratD3 from "../../public/images/heratD3.png"
 
 
 type Project = {
@@ -37,7 +59,78 @@ type Project = {
 };
 
 const projects: Project[] = [
-
+    {
+    title: "Heart disease classification  using sklearn",
+    description: "A machine learning model that classifies heart disease presence based on medical features using Scikit-Learn classification algorithms, with performance evaluation and visualization.",
+    tags: ["python", "sklearn"],
+    images: [Heart1 , Heart2 , Heart3 , Heart4 , Heart6],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Heart disease classification  using different sklearn algorithms",
+    description: "A comparative study of multiple classification algorithms (Logistic Regression, SVM, KNN, Decision Tree, etc.) to identify the most effective model for heart disease prediction.",
+    tags: ["python", "sklearn"],
+    images: [heratD , heratD1 , heratD2 , heratD3],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "House predict   using Deep learning",
+    description:"A deep learning model built with Keras to predict house prices based on numerical features, demonstrating neural network training, evaluation, and prediction accuracy",
+    tags: ["python", "keras"],
+    images: [housePDL , housePDL1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "LSTM Time Series Prediction",
+    description: "A practical implementation of an LSTM network for time series forecasting, showing how sequential data patterns are learned and used to predict future values.",
+    tags: ["python", "LSTM"],
+    images: [lstm , lstm1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+  {
+    title: "Simple K-Means Clustering using Scikit-Learn",
+    description: "An introductory implementation of the K-Means clustering algorithm for unsupervised learning, including cluster visualization and interpretation.",
+    tags: ["python", "sklearn"],
+    images: [kmeans , kmeans1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Support Vector Machine (SVM) using Scikit-Learn",
+    description: "A classification model using Support Vector Machines that demonstrates data separation, decision boundaries, and margin visualization.",
+    tags: ["python", "sklearn"],
+    images: [SVM , SVM1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+  {
+    title: "Simple Logistic Regression using Scikit-Learn",
+    description: "A binary classification example using Logistic Regression, highlighting probability estimation and decision boundary visualization.",
+    tags: ["python", "sklearn"],
+    images: [LOS , LOS1 , LOS2],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+  {
+    title: "Simple Linear Regression using Scikit-Learn",
+    description:"A basic linear regression model that learns relationships between variables and predicts continuous values, with graphical representation of the regression line." ,
+    tags: ["python", "sklearn"],
+    images: [LRS , LRS2],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
   {
     title: "service health monitor (VIGIL)",
     description: "A monitoring system built with Go for tracking the availability and performance of critical services. Provides real-time alerts, logs, and dashboards to ensure system reliability and rapid issue resolution.",

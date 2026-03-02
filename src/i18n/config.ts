@@ -20,27 +20,27 @@ i18n
             contact: 'Contact',
             name:'Jaafar AL-Hourani'
           },
-          hero: {
-            title: 'Crafting Digital Experiences with Code and Creativity',
-            subtitle: 'Full Stack Developer',
-            description: 'I build innovative web applications with modern technologies, focusing on clean code, exceptional user experiences, and scalable solutions.',
-            contact: 'Contact me',
-            viewProjects: 'View Projects',
-            techStack: 'Tech Stack'
-          },
-          about: {
-            title: 'About Me',
-            whoAmI: 'Who am I?',
-            name: "I'm Jaafar Abdo AL-Hourani",
-            description1: "I'm a passionate Full Stack Developer with a love for creating elegant solutions to complex problems. With over 5 years of experience in web development, I specialize in building responsive and interactive applications using modern JavaScript frameworks and libraries.",
-            description2: 'My journey in software development began with a curiosity about how things work online. That curiosity evolved into a passion for crafting digital experiences that are not only functional but also aesthetically pleasing and user-friendly.',
-            approach: 'My approach:',
-            downloadResume: 'Download Resume',
-            availableForWork: 'Available for work',
-            cleanCode: 'Clean, maintainable code with best practices',
-            userCentered: 'User-centered design and development',
-            continuousLearning: 'Continuous learning and staying updated with tech trends'
-          },
+hero: {
+  title: 'Building Intelligent Digital Experiences with Code and Data',
+  subtitle: 'Full Stack Developer | Machine Learning & AI Engineer',
+  description: 'I develop scalable web applications and intelligent systems by combining modern full-stack technologies with machine learning and artificial intelligence, delivering data-driven and user-focused solutions.',
+  contact: 'Contact me',
+  viewProjects: 'View Projects',
+  techStack: 'Tech Stack'
+},
+about: {
+  title: 'About Me',
+  whoAmI: 'Who am I?',
+  name: "I'm Jaafar Abdo AL-Hourani",
+  description1: "I'm a Full Stack Developer and Machine Learning Engineer with a strong passion for building intelligent, scalable, and data-driven applications. I combine modern web technologies with machine learning and artificial intelligence to solve real-world problems efficiently.",
+  description2: "My journey in software development started with web development and gradually evolved into machine learning and AI. This transition allowed me to design systems that are not only visually appealing and user-friendly, but also capable of learning from data and making intelligent decisions.",
+  approach: 'My approach:',
+  downloadResume: 'Download Resume',
+  availableForWork: 'Available for work',
+  cleanCode: 'Clean, maintainable code following best practices',
+  userCentered: 'User-centered and data-driven development',
+  continuousLearning: 'Continuous learning in software engineering, machine learning, and AI'
+},
           projects: {
             title: 'Featured Projects',
             description: "Explore some of my recent work. Each project represents unique challenges and solutions that I've implemented.",
@@ -106,7 +106,7 @@ education: {
             navigation: 'Navigation',
             services: 'Services',
             contact: 'Contact',
-            webDev: 'Web Development',
+            machineLearning :'Machine Learning',
             frontendDev: 'Front-End Development',
             backendDev: 'Back-End Development',
             uiUxDesign: 'UI/UX Design',
