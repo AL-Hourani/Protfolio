@@ -46,7 +46,20 @@ import heratD from "../../public/images/heratD.png"
 import heratD1 from "../../public/images/heratD1.png"
 import heratD2 from "../../public/images/heratD2.png"
 import heratD3 from "../../public/images/heratD3.png"
-
+import shopping1 from "../../public/images/customer_dataCluster.png"
+import shopping2 from "../../public/images/customer_dataCluste1.png"
+import shopping3 from "../../public/images/customer_dataCluste2.png"
+import NearestNeighborsregression from "../../public/images/NearestNeighborsregression.png"
+import NearestNeighborsregression1 from "../../public/images/NearestNeighborsregression.png"
+import Outlierdetection from "../../public/images/Outlierdetection.png"
+import Outlierdetection1 from "../../public/images/Outlierdetection1.png"
+import NearestNeighborsClassification from "../../public/images/NearestNeighborsClassification.png"
+import NearestNeighborsClassification1 from "../../public/images/NearestNeighborsClassification1.png"
+import digtit1 from "../../public/images/digit1.png"
+import digtit2 from "../../public/images/digit2.png"
+import digtit3 from "../../public/images/digit3.png"
+import digtit4 from "../../public/images/digit4.png"
+import digtit5 from "../../public/images/digit5.png"
 
 type Project = {
   title: string;
@@ -59,6 +72,51 @@ type Project = {
 };
 
 const projects: Project[] = [
+    {
+    title: "Shopping data clustering for customers",
+    description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
+    tags: ["python", "sklearn"],
+    images: [shopping1 , shopping2 , shopping3],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Recognizing hand-written digits",
+    description: "An example showing how the scikit-learn can be used to recognize images of hand-written digits.",
+    tags: ["python", "sklearn"],
+    images: [digtit1 , digtit2 , digtit3 ,digtit4,digtit5],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Nearest Neighbors regression",
+    description: "A regression model built with the K-Nearest Neighbors algorithm that predicts continuous values by analyzing similarity between data points and evaluating prediction accuracy.",
+    tags: ["python", "sklearn"],
+    images: [NearestNeighborsregression , NearestNeighborsregression1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Nearest Neighbors Classification",
+    description: "A supervised learning model using the K-Nearest Neighbors algorithm to classify data points based on the closest labeled examples in the dataset.",
+    tags: ["python", "sklearn"],
+    images: [NearestNeighborsClassification , NearestNeighborsClassification],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+   {
+    title: "Outlier detection",
+    description: "A machine learning system designed to detect abnormal or rare data points in datasets using anomaly detection techniques implemented with Scikit-Learn.",
+    tags: ["python", "sklearn"],
+    images: [Outlierdetection , Outlierdetection1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
     {
     title: "Heart disease classification  using sklearn",
     description: "A machine learning model that classifies heart disease presence based on medical features using Scikit-Learn classification algorithms, with performance evaluation and visualization.",

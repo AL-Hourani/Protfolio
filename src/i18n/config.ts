@@ -2,6 +2,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import Research from '@/components/Research';
 
 i18n
   .use(LanguageDetector)
@@ -14,6 +15,7 @@ i18n
             home: 'Home',
             about: 'About',
             projects: 'Projects',
+            research: 'research',
             skills: 'Skills',
             education: 'Education',
             languages: 'Languages',
