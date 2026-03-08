@@ -15,11 +15,11 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center pt-16 relative">
       <div className="container mx-auto section-content">
         <div className="max-w-3xl mx-auto text-center space-y-6">
-          <div className="inline-block px-4 py-1.5  bg-github-medium rounded-full mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="inline-block px-4 py-1.5  bg-github-medium rounded-full mb-4 ">
             <span className="text-github-accent font-medium">{t('hero.subtitle')}</span>
           </div>
           
-          <h1 className="font-bold tracking-tighter animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <h1 className="font-bold tracking-tighter">
             {i18n.language === 'ar' ? (
               <>
                 <span className="text-github-accent">{t('hero.title').split(' ')[0]} </span>
@@ -34,11 +34,11 @@ const Hero = () => {
             )}
           </h1>
           
-          <p className="text-lg md:text-xl text-github-text opacity-90 leading-relaxed max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <p className="text-lg md:text-xl text-github-text opacity-90 leading-relaxed max-w-2xl mx-auto ">
             {t('hero.description')}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 ">
             <Button 
               className="bg-github-blue hover:bg-opacity-90 flex items-center gap-2 px-6 py-6 has-arrow-icon" 
               onClick={scrollToContact}
@@ -54,7 +54,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="pt-16 animate-fade-in" style={{ animationDelay: '1s' }}>
+          <div className="pt-16 ">
             <p className="text-github-text opacity-70 mb-3">{t('hero.techStack')}</p>
             <div className="flex flex-wrap justify-center gap-6">
               {['Python','Machine Learning','Scikit-Learn', 'numpy', 'keras' , 'pytorch' , 'pandas' ,'matplotlib' , 'seaborn','Sicpy','pygal' ,'React', 'TypeScript', 'Node.js' , 'go' , 'Database' ].map((tech) => (

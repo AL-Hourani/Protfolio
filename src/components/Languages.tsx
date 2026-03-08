@@ -53,7 +53,7 @@ const Languages = () => {
               </div>
               
               <div className="relative">
-                <div className="aspect-square max-w-xs rounded-full bg-gradient-to-br from-github-blue/20 to-github-accent/20 flex items-center justify-center animate-spin-slow relative">
+                <div className="aspect-square max-w-xs rounded-full bg-gradient-to-br from-github-blue/20 to-github-accent/20 flex items-center justify-center  relative">
                   <div className="absolute inset-2 rounded-full border-2 border-dashed border-github-accent/30"></div>
                   <div className="absolute inset-8 rounded-full border-2 border-dashed border-github-blue/30"></div>
                   <div className="h-24 w-24 rounded-full bg-github-medium/80 backdrop-blur-lg flex items-center justify-center">

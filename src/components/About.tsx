@@ -64,7 +64,7 @@ const About = () => {
             <div className="relative order-1 md:order-2">
               <div className="aspect-square rounded-2xl overflow-hidden border-2 border-github-medium bg-github-medium relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-48 h-48 rounded-full bg-github-blue bg-opacity-10 flex items-center justify-center text-7xl font-bold text-github-accent animate-float">
+                  <div className="w-48 h-48 rounded-full bg-github-blue bg-opacity-10 flex items-center justify-center text-7xl font-bold text-github-accent">
                   {t('Logo.logo')}
                   </div>
                 </div>
