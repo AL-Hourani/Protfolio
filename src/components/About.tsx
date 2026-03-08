@@ -53,7 +53,7 @@ const About = () => {
               </div>
               
               <div className="pt-4">
-                <a href="/public/Jaafar_AlHourani_CV.pdf" download>
+                <a href="#" download>
                   <Button variant="outline" className="border-github-accent text-github-accent hover:bg-github-accent hover:bg-opacity-10 flex gap-2">
                     <FileDown size={18} /> {t('about.downloadResume')}
                   </Button>
