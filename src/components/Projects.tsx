@@ -68,6 +68,10 @@ import fraud1 from "../../public/images/fraud1.png"
 import fraud2 from "../../public/images/fraud2.png"
 import fraud3 from "../../public/images/fraud3.png"
 import fraud4 from "../../public/images/fraud4.png"
+import PredictCalefoHose1 from "../../public/images/calPredicthouse1.png"
+import PredictCalefoHose2 from "../../public/images/calPredicthouse2.png"
+import PredictCalefoHose3 from "../../public/images/calPredicthouse3.png"
+import PredictCalefoHose4 from "../../public/images/calPredicthouse4.png"
 
 type Project = {
   title: string;
@@ -90,8 +94,8 @@ const projects: Project[] = [
     status: "live"
   },
     {
-    title: "Recommendation systems for movies",
-    description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
+    title: "Movie Recommendation System",
+    description: "Build a collaborative filtering system to suggest movies to users based on their ratings and similarity with other users",
     tags: ["python", "sklearn"],
     images: [recomm4 , recomm3 , recomm2 , recomm1 ],
     githubUrl: "#",
@@ -99,8 +103,8 @@ const projects: Project[] = [
     status: "live"
   },
     {
-    title: "Fraud Detection",
-    description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
+    title: "Credit Card Fraud Detection",
+    description: "Predict fraudulent transactions using imbalanced financial datasets. Focus on precision, recall, and anomaly detection methods.",
     tags: ["python", "sklearn"],
     images: [fraud1 , fraud2 , fraud3, fraud4 ],
     githubUrl: "#",
@@ -125,6 +129,24 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
   },
+    {
+    title: "California House Price Prediction",
+    description: "Predict house prices in California using features like location, number of bedrooms, population, and median income. Apply Linear Regression or Gradient Boosting.",
+    tags: ["python", "sklearn"],
+    images: [PredictCalefoHose4 , PredictCalefoHose3 , PredictCalefoHose2 , PredictCalefoHose1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+  //   {
+  //   title: "Spam Email Cassification",
+  //   description: "Classify emails as spam or ham using text features. Use NLP techniques like TF-IDF and classifiers like Multinomial Naive Bayes.",
+  //   tags: ["python", "sklearn"],
+  //   images: [PredictCalefoHose4 , PredictCalefoHose3 , PredictCalefoHose2 , PredictCalefoHose1],
+  //   githubUrl: "#",
+  //   liveUrl: "#",
+  //   status: "live"
+  // },
     {
     title: "Nearest Neighbors Classification",
     description: "A supervised learning model using the K-Nearest Neighbors algorithm to classify data points based on the closest labeled examples in the dataset.",
@@ -376,7 +398,7 @@ const Projects = () => {
 
           <div   className="fixed inset-0  bg-black/80 flex items-center justify-center z-50 p-6">
 
-            <div className="bg-github-medium  max-w-4xl w-full rounded-xl overflow-hidden relative">
+            <div className="bg-github-medium   max-w-4xl w-full rounded-xl overflow-hidden relative">
 
               {/* Close */}
 

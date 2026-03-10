@@ -10,22 +10,14 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center border-b border-github-medium pb-8 mb-8">
 
-            <div className="flex items-center mb-6 md:mb-0">
-              <div className="flex items-center gap-2">
+            <div className="flex items-center  w-full  mb-6 md:mb-0">
+              <div className="flex items-center justify-between w-full  gap-2">
 
-                <div className="h-10 w-10 rounded-full bg-github-blue flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">J</span>
-                </div>
-
-                <span className="text-xl font-bold text-github-text">
+                <span className="text-xl font-bold text-github-blue text-github-text">
                   Jaafar
                 </span>
 
-              </div>
-            </div>
-
             <div className="flex space-x-6">
-
               <a
                 href="#"
                 className="text-github-text hover:text-github-accent transition-colors"
@@ -33,9 +25,12 @@ const Footer = () => {
               >
                 <Github size={20} />
               </a>
-
- 
             </div>
+
+              </div>
+            </div>
+
+
 
           </div>
 

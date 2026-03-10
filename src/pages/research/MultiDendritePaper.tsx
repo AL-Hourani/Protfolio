@@ -1,11 +1,10 @@
-import { Button } from "@/components/ui/button";
+
+
+import { Button  } from "@/components/ui/button";
 import { ArrowLeft, Github, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import CodeBlock from "./CodeBlock";
-
-
-
-
+import { Card } from "@/components/ui/card";
 
 const neuronCode = `
 import numpy as np
@@ -105,140 +104,124 @@ for x, target in zip(X, Y):
     print("input:", x, "expected:", target, "output:", round(y, 3))
 `
 
+
+
 const MultiDendritePaper = () => {
   return (
-    <div className="min-h-screen bg-github-dark text-github-text ">
+    <div className="min-h-screen bg-gradient-to-b from-github-dark to-github-darker text-github-text py-16">
+      <div className="container mx-auto max-w-5xl px-4">
 
-      <div className="container mx-auto max-w-4xl">
-
-        {/* Back button */}
+        {/* Back Button */}
         <Link to="/">
-          <Button variant="outline" className="mb-10 flex gap-2">
+          <Button variant="outline" className="mb-8 flex gap-2 hover:bg-github-accent/10 transition-all">
             <ArrowLeft size={18} />
             Back
           </Button>
         </Link>
 
-        {/* Title */}
-        <h1 className="text-4xl font-bold mb-4">
-          Multi-Dendrite Learning Neuron
-        </h1>
-
-        <p className="text-github-accent mb-10">
-          Jaafar Al-Hourani — Independent AI Research
-        </p>
-
-        {/* Abstract */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Abstract</h2>
-
-          <p className="opacity-90 leading-relaxed">
-            In this work we explore a biologically inspired neuron model
-            composed of multiple dendritic branches. Each dendrite learns
-            using a different local learning rule such as Hebbian learning,
-            predictive error learning, and coactivity learning.
-            Instead of relying on global backpropagation, learning occurs
-            locally within each dendritic branch.
-            The neuron integrates dendritic outputs in the soma using
-            adaptive weights, allowing the neuron to dynamically prioritize
-            the most informative dendrites.
+        {/* Title Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-2">Multi-Dendrite Learning Neuron</h1>
+          <p className="text-github-accent text-lg font-medium">
+            Jaafar Al-Hourani — Independent AI Research
           </p>
-        </section>
+          <div className="h-1 w-32 mx-auto bg-gradient-to-r from-github-accent/20 via-github-accent to-github-accent/20 mt-4 rounded-full"></div>
+        </div>
 
-        {/* Motivation */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Motivation</h2>
+        {/* Sections Wrapper */}
+        <div className="space-y-12">
 
-          <p className="opacity-90 leading-relaxed">
-            Traditional artificial neural networks rely heavily on
-            backpropagation for training. However, biological neurons do not
-            appear to implement backpropagation directly. Real neurons
-            contain multiple dendritic branches that can perform local
-            computations and learning independently.
-            This research explores whether a neuron composed of multiple
-            learning dendrites can perform useful computation using purely
-            local learning rules.
-          </p>
-        </section>
+          {/* Abstract */}
+          <Card className="p-8 bg-github-medium/50 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all">
+            <h2 className="text-3xl font-bold mb-4 border-b border-github-accent/30 pb-2">Abstract</h2>
+            <p className="opacity-90 leading-relaxed text-lg">
+              In this work we explore a biologically inspired neuron model
+              composed of multiple dendritic branches. Each dendrite learns
+              using a different local learning rule such as Hebbian learning,
+              predictive error learning, and coactivity learning. Instead of
+              relying on global backpropagation, learning occurs locally
+              within each dendritic branch. The neuron integrates dendritic
+              outputs in the soma using adaptive weights, allowing the neuron
+              to dynamically prioritize the most informative dendrites.
+            </p>
+          </Card>
 
-        {/* Model */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Model Architecture</h2>
+          {/* Motivation */}
+          <Card className="p-8 bg-github-medium/50 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all">
+            <h2 className="text-3xl font-bold mb-4 border-b border-github-accent/30 pb-2">Motivation</h2>
+            <p className="opacity-90 leading-relaxed text-lg">
+              Traditional artificial neural networks rely heavily on
+              backpropagation. Biological neurons, however, contain multiple
+              dendritic branches that perform local computations independently.
+              This research explores whether a neuron with multiple learning
+              dendrites can perform useful computations using purely local
+              learning rules.
+            </p>
+          </Card>
 
-          <ul className="list-disc ml-6 space-y-2">
-            <li>A neuron contains multiple dendrites.</li>
-            <li>Each dendrite receives the same input vector.</li>
-            <li>Each dendrite learns using a different local rule.</li>
-            <li>The soma integrates dendritic outputs.</li>
-            <li>Each dendrite has an adaptive influence weight α.</li>
-          </ul>
-        </section>
+          {/* Model Architecture */}
+          <Card className="p-8 bg-github-medium/50 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all">
+            <h2 className="text-3xl font-bold mb-4 border-b border-github-accent/30 pb-2">Model Architecture</h2>
+            <ul className="list-disc ml-6 space-y-2 text-lg">
+              <li>A neuron contains multiple dendrites.</li>
+              <li>Each dendrite receives the same input vector.</li>
+              <li>Each dendrite learns using a different local rule.</li>
+              <li>The soma integrates dendritic outputs.</li>
+              <li>Each dendrite has an adaptive influence weight α.</li>
+            </ul>
+          </Card>
 
-        {/* Learning Rules */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Learning Rules</h2>
+          {/* Learning Rules */}
+          <Card className="p-8 bg-github-medium/50 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all">
+            <h2 className="text-3xl font-bold mb-4 border-b border-github-accent/30 pb-2">Learning Rules</h2>
+            <ul className="list-disc ml-6 space-y-2 text-lg">
+              <li>Hebbian Learning</li>
+              <li>Predictive Error Learning</li>
+              <li>Coactivity Learning</li>
+            </ul>
+          </Card>
 
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Hebbian Learning</li>
-            <li>Predictive Error Learning</li>
-            <li>Coactivity Learning</li>
-          </ul>
-        </section>
+          {/* Implementation / Code */}
+          <Card className="p-8 bg-github-medium/50 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all">
+            <h2 className="text-3xl font-bold mb-4 border-b border-github-accent/30 pb-2">Implementation</h2>
+            <p className="mb-6 opacity-80 text-lg">
+              Below is a simplified implementation of the multi-dendrite neuron used in experiments.
+            </p>
+            <CodeBlock code={neuronCode} />
+          </Card>
 
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-6">
-            Implementation
-          </h2>
+          {/* Experiments */}
+          <Card className="p-8 bg-github-medium/50 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all">
+            <h2 className="text-3xl font-bold mb-4 border-b border-github-accent/30 pb-2">Experiments</h2>
+            <p className="opacity-90 leading-relaxed text-lg">
+              Experiments were performed on synthetic datasets with multiple input features.
+              The neuron was tested on tasks requiring aggregation and approximation of input signals.
+              Results show that combining multiple dendritic learning rules improves adaptability compared to a single-rule neuron.
+            </p>
+          </Card>
 
-          <p className="mb-6 opacity-80">
-            Below is a simplified implementation of the multi-dendrite neuron
-            used in the experiments.
-          </p>
+          {/* Results */}
+          <Card className="p-8 bg-github-medium/50 backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all">
+            <h2 className="text-3xl font-bold mb-4 border-b border-github-accent/30 pb-2">Results</h2>
+            <p className="opacity-90 leading-relaxed text-lg">
+              The neuron successfully learned approximate mappings between input vectors and target outputs using purely local learning mechanisms.
+              Adaptive dendritic weights allowed the neuron to dynamically emphasize the most useful learning rule during training.
+            </p>
+          </Card>
 
-          <CodeBlock code={neuronCode} />
+        </div>
 
-        </section>
-
-        {/* Experiments */}
-        <section className="mb-6">
-          <h2 className="text-2xl font-bold mb-4">Experiments</h2>
-
-          <p className="opacity-90 leading-relaxed">
-            Experiments were performed on synthetic datasets with multiple
-            input features. The neuron was tested on tasks requiring
-            aggregation and approximation of input signals. Results show
-            that combining multiple dendritic learning rules improves
-            adaptability compared to a single-rule neuron.
-          </p>
-        </section>
-
-        {/* Results */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Results</h2>
-
-          <p className="opacity-90 leading-relaxed">
-            The neuron successfully learned approximate mappings between
-            input vectors and target outputs using purely local learning
-            mechanisms. Adaptive dendritic weights allowed the neuron to
-            dynamically emphasize the most useful learning rule during
-            training.
-          </p>
-        </section>
-
-        {/* Links */}
-        <section className="flex gap-4 mt-16">
-
-          <Button variant="outline">
-            <Github size={18} className="mr-2" />
+        {/* Action Buttons */}
+        <div className="flex gap-4 mt-16 justify-center">
+          <Button variant="outline" className="flex items-center gap-2 hover:bg-github-accent/10 transition-all">
+            <Github size={18} />
             Source Code
           </Button>
-
-          <Button variant="outline">
-            <FileText size={18} className="mr-2" />
+          <Button variant="outline" className="flex items-center gap-2 hover:bg-github-accent/10 transition-all">
+            <FileText size={18} />
             Download PDF
           </Button>
-
-        </section>
+        </div>
 
       </div>
     </div>

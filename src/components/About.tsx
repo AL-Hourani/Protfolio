@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-github-darker/50">
 
-      <div className="w-[92%] max-w-6xl mx-auto">
+      <div className="w-[92%] max-w-6xl mx-auto px-4">
 
         {/* Title */}
         <div className="text-center mb-20">
