@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Brain, Microscope, Cpu, Github, FileText, FlaskConical } from "lucide-react";
+import { Brain, Github, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Research = () => {
@@ -27,7 +27,7 @@ const Research = () => {
   return (
     <section id="research" className="py-24 bg-github-dark">
 
-      <div className="container mx-auto section-content">
+      <div className="w-[92%] max-w-6xl mx-auto">
 
         {/* Title */}
         <div className="text-center mb-20">
@@ -118,10 +118,7 @@ const Research = () => {
                       Code
                     </Button>
 
-                    <Button size="sm" variant="outline">
-                      <FlaskConical size={16} className="mr-2" />
-                      Experiments
-                    </Button>
+  
 
                   </div>
 

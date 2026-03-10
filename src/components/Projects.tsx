@@ -1,7 +1,7 @@
-import { ExternalLink, Github } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState } from "react";
+import { ExternalLink, Github, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Card } from "@/components/ui/card";
+
 import ipo from "../../public/images/po.png"
 import ipot from "../../public/images/poo.png"
 import ipor from "../../public/images/pth.png"
@@ -60,6 +60,14 @@ import digtit2 from "../../public/images/digit2.png"
 import digtit3 from "../../public/images/digit3.png"
 import digtit4 from "../../public/images/digit4.png"
 import digtit5 from "../../public/images/digit5.png"
+import recomm1 from "../../public/images/recom-sys1.png"
+import recomm2 from "../../public/images/recom-sys2.png"
+import recomm3 from "../../public/images/recom-sys3.png"
+import recomm4 from "../../public/images/recom-sys4.png"
+import fraud1 from "../../public/images/fraud1.png"
+import fraud2 from "../../public/images/fraud2.png"
+import fraud3 from "../../public/images/fraud3.png"
+import fraud4 from "../../public/images/fraud4.png"
 
 type Project = {
   title: string;
@@ -77,6 +85,24 @@ const projects: Project[] = [
     description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
     tags: ["python", "sklearn"],
     images: [shopping1 , shopping2 , shopping3],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Recommendation systems for movies",
+    description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
+    tags: ["python", "sklearn"],
+    images: [recomm4 , recomm3 , recomm2 , recomm1 ],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Fraud Detection",
+    description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
+    tags: ["python", "sklearn"],
+    images: [fraud1 , fraud2 , fraud3, fraud4 ],
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
@@ -212,83 +238,102 @@ const projects: Project[] = [
 
 ];
 
+
+
 const Projects = () => {
-  const { t } = useTranslation();
 
+  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [imageIndex, setImageIndex] = useState(0);
 
-  // لكل مشروع نخزن الصورة الحالية
-  const [currentImageIndex, setCurrentImageIndex] = useState<Record<string, number>>(
-    projects.reduce((acc, project) => {
-      acc[project.title] = 0;
-      return acc;
-    }, {} as Record<string, number>)
-  );
+  const openProject = (project: Project) => {
+    setSelectedProject(project);
+    setImageIndex(0);
+  };
 
-  const handleDotClick = (projectTitle: string, index: number) => {
-    setCurrentImageIndex((prev) => ({ ...prev, [projectTitle]: index }));
+  const closeProject = () => {
+    setSelectedProject(null);
+  };
+
+  const nextImage = () => {
+    if (!selectedProject) return;
+    setImageIndex((prev) =>
+      prev === selectedProject.images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    if (!selectedProject) return;
+    setImageIndex((prev) =>
+      prev === 0 ? selectedProject.images.length - 1 : prev - 1
+    );
   };
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto section-content">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('projects.title')}</h2>
-          <p className="max-w-2xl mx-auto text-github-text opacity-80">
-            {t('projects.description')}
+    <section id="projects" className="py-24">
+
+      <div className="w-[92%] max-w-6xl mx-auto">
+
+        {/* Title */}
+        <div className="text-center mb-20">
+
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Projects
+          </h2>
+
+          <p className="text-github-text opacity-80">
+            Explore some of my recent work and machine learning projects.
           </p>
+
           <div className="h-1 w-20 bg-github-accent mx-auto mt-4"></div>
+
         </div>
 
-        <div className="grid md:grid-cols-1 gap-8 max-w-5xl mx-auto">
-          {projects.map((project, index) => (
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {projects.slice(0, visibleProjects).map((project, index) => (
+
             <Card
               key={index}
-              className="overflow-hidden border-github-medium bg-github-medium hover:border-github-accent transition-all duration-300 group relative"
+              onClick={() => openProject(project)}
+              className="cursor-pointer group overflow-hidden bg-github-medium border border-github-medium hover:border-github-accent transition duration-300"
             >
-              {/* حالة المشروع */}
-              {project.status && (
-                <span className={`absolute top-2 right-2 px-2 py-1 text-xs rounded 
-                  ${project.status === 'live' ? 'bg-green-500' : 'bg-yellow-500'} text-white`}>
-                  {project.status === 'live' ? 'Live' : 'In Progress'}
-                </span>
-              )}
 
-              {/* عرض الصور */}
-              <div className="flex gap-2 overflow-x-auto py-4 px-2 bg-github-darker">
-                {project.images.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    alt={`${project.title} screenshot ${i+1}`}
-                    className="object-cover rounded-lg flex-shrink-0"
-                  />
-                ))}
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+
+                <img
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+
+                {project.status && (
+                  <span
+                    className={`absolute top-3 right-3 text-xs px-2 py-1 rounded text-white
+                    ${project.status === "live" ? "bg-green-500" : "bg-yellow-500"}`}
+                  >
+                    {project.status === "live" ? "Live" : "In Progress"}
+                  </span>
+                )}
+
               </div>
 
-                  {/* Dots */}
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
-              {project.images.map((_, i) => (
-                <span
-                  key={i}
-                  className={`w-3 h-3 rounded-full cursor-pointer transition-colors ${
-                    currentImageIndex[project.title] === i ? 'bg-github-accent' : 'bg-github-dark'
-                  }`}
-                  onClick={() => handleDotClick(project.title, i)}
-                />
-              ))}
-            </div>
+              {/* Content */}
+              <div className="p-5 space-y-3">
 
-              {/* محتوى المشروع */}
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-semibold group-hover:text-github-accent transition-colors">
+                <h3 className="text-lg font-semibold group-hover:text-github-accent transition">
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-github-text opacity-80 line-clamp-3">
+                <p className="text-sm text-github-text opacity-80 line-clamp-2">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 pt-2">
+                <div className="flex flex-wrap gap-2">
+
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
@@ -297,42 +342,155 @@ const Projects = () => {
                       {tag}
                     </span>
                   ))}
+
                 </div>
 
-                <div className="flex items-center pt-4 gap-4">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-github-text hover:text-github-accent transition-colors flex items-center gap-1 text-sm"
-                  >
-                    <Github size={16} />
-                    {t('projects.viewCode')}
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-github-text hover:text-github-accent transition-colors flex items-center gap-1 text-sm"
-                  >
-                    <ExternalLink size={16} />
-                    {t('projects.viewDemo')}
-                  </a>
-                </div>
               </div>
+
             </Card>
+
           ))}
+
         </div>
 
-        <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 text-github-accent hover:underline"
-          >
-            {t('projects.viewAll')} <ExternalLink size={16} />
-          </a>
-        </div>
+
+        {/* Load More */}
+        {visibleProjects < projects.length && (
+
+          <div className="text-center mt-14">
+
+            <button
+              onClick={() => setVisibleProjects((prev) => prev + 6)}
+              className="px-6 py-3 bg-github-accent text-white rounded-lg hover:opacity-90 transition"
+            >
+              Load More Projects
+            </button>
+
+          </div>
+
+        )}
+
+
+        {/* Modal */}
+        {selectedProject && (
+
+          <div   className="fixed inset-0  bg-black/80 flex items-center justify-center z-50 p-6">
+
+            <div className="bg-github-medium  max-w-4xl w-full rounded-xl overflow-hidden relative">
+
+              {/* Close */}
+
+
+
+              {/* Image Slider */}
+              <div className="relative h-[400px] bg-black">
+
+                <img
+                  src={selectedProject.images[imageIndex]}
+                  className="w-full h-full object-contain"
+                />
+
+                {/* arrows */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full"
+                >
+                  <ChevronLeft />
+                </button>
+
+                <button
+                  onClick={nextImage}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full"
+                >
+                  <ChevronRight />
+                </button>
+
+              </div>
+
+
+              {/* Dots */}
+              <div className="flex justify-center gap-2 py-3">
+
+                {selectedProject.images.map((_, i) => (
+
+                  <span
+                    key={i}
+                    onClick={() => setImageIndex(i)}
+                    className={`w-3 h-3 rounded-full cursor-pointer
+                    ${i === imageIndex ? "bg-github-accent" : "bg-gray-500"}`}
+                  />
+
+                ))}
+
+              </div>
+
+
+              {/* Content */}
+              <div className="p-6 space-y-4">
+
+                <h3 className="text-2xl font-bold">
+                  {selectedProject.title}
+                </h3>
+
+                <p className="text-github-text opacity-80">
+                  {selectedProject.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+
+                  {selectedProject.tags.map((tag, i) => (
+
+                    <span
+                      key={i}
+                      className="text-xs px-2 py-1 rounded bg-github-dark text-github-accent"
+                    >
+                      {tag}
+                    </span>
+
+                  ))}
+
+                </div>
+
+
+                <div className="flex gap-6 pt-4">
+
+                  <a
+                    href={selectedProject.githubUrl}
+                    target="_blank"
+                    className="flex items-center gap-2 hover:text-github-accent"
+                  >
+                    <Github size={18} />
+                    View Code
+                  </a>
+
+                  <a
+                    href={selectedProject.liveUrl}
+                    target="_blank"
+                    className="flex items-center gap-2 hover:text-github-accent"
+                  >
+                    <ExternalLink size={18} />
+                    Live Demo
+                  </a>
+
+              <button
+                onClick={closeProject}
+                className=" text-white"
+              >
+                <X />
+              </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        )}
+
       </div>
+
     </section>
   );
 };

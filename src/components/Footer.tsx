@@ -1,62 +1,61 @@
-
-import { Github, Linkedin, Twitter } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Github} from "lucide-react";
 
 const Footer = () => {
-  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-github-darker py-12">
-      <div className="container mx-auto section-content">
-        <div className="max-w-5xl mx-auto">
+      <div className="w-[92%] max-w-6xl mx-auto  section-content">
+        <div className="p-8">
+
           <div className="flex flex-col md:flex-row justify-between items-center border-b border-github-medium pb-8 mb-8">
+
             <div className="flex items-center mb-6 md:mb-0">
               <div className="flex items-center gap-2">
+
                 <div className="h-10 w-10 rounded-full bg-github-blue flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">{t('Logo.logo')}</span>
+                  <span className="text-white font-bold text-xl">J</span>
                 </div>
-                <span className="text-xl font-bold text-github-text"> {t('nav.name')}</span>
+
+                <span className="text-xl font-bold text-github-text">
+                  Jaafar
+                </span>
+
               </div>
             </div>
-            
+
             <div className="flex space-x-6">
-              <a 
-                href="#" 
+
+              <a
+                href="#"
                 className="text-github-text hover:text-github-accent transition-colors"
                 aria-label="GitHub"
               >
                 <Github size={20} />
               </a>
-              <a 
-                href="#" 
-                className="text-github-text hover:text-github-accent transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-github-text hover:text-github-accent transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
+
+ 
             </div>
+
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-8">
+
             <div>
-              <h4 className="text-lg font-semibold mb-4">{t('footer.navigation')}</h4>
+              <h4 className="text-lg font-semibold mb-4">
+                Navigation
+              </h4>
+
               <div className="grid grid-cols-2 gap-2">
+
                 {[
-                  { name: t('nav.home'), id: 'hero' },
-                  { name: t('nav.about'), id: 'about' },
-                  { name: t('nav.projects'), id: 'projects' },
-                  { name: t('nav.skills'), id: 'skills' },
-                  { name: t('nav.contact'), id: 'contact' }
+                  { name: "Home", id: "hero" },
+                  { name: "About", id: "about" },
+                  { name: "Projects", id: "projects" },
+                  { name: "Skills", id: "skills" },
+                  { name: "Contact", id: "contact" },
                 ].map((item) => (
-                  <a 
+                  <a
                     key={item.id}
                     href={`#${item.id}`}
                     className="text-github-text opacity-80 hover:opacity-100 hover:text-github-accent transition-colors"
@@ -64,59 +63,78 @@ const Footer = () => {
                     {item.name}
                   </a>
                 ))}
+
               </div>
             </div>
-            
+
             <div>
-              <h4 className="text-lg font-semibold mb-4">{t('footer.services')}</h4>
+              <h4 className="text-lg font-semibold mb-4">
+                Services
+              </h4>
+
               <ul className="space-y-2">
+
                 {[
-                  { key: 'machineLearning', text: t('footer.machineLearning') },
-                  { key: 'frontendDev', text: t('footer.frontendDev') },
-                  { key: 'backendDev', text: t('footer.backendDev') },
-                  { key: 'uiUxDesign', text: t('footer.uiUxDesign') }
+                  "Machine Learning",
+                  "Frontend Development",
+                  "Backend Development",
+                  "UI / UX Design",
                 ].map((service) => (
-                  <li key={service.key}>
-                    <a 
+                  <li key={service}>
+                    <a
                       href="#"
                       className="text-github-text opacity-80 hover:opacity-100 hover:text-github-accent transition-colors"
                     >
-                      {service.text}
+                      {service}
                     </a>
                   </li>
                 ))}
+
               </ul>
             </div>
-            
+
             <div>
-              <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
+
+              <h4 className="text-lg font-semibold mb-4">
+                Contact
+              </h4>
+
               <address className="not-italic space-y-2 text-github-text opacity-80">
-                <p>{t('contact.address')}</p>
+
+                <p>Homs, Syria</p>
+
                 <p>
-                  <a 
+                  <a
                     href="mailto:hello@example.com"
                     className="hover:text-github-accent transition-colors"
                   >
-                    jalhourani@gmail.com
+                    jalhourani3@gmail.com
                   </a>
                 </p>
+
                 <p>
-                  <a 
-                    href="tel:+1234567890"
+                  <a
+                    href="tel:+963980329517"
                     className="hover:text-github-accent transition-colors"
                   >
-                   {t('contact.phoneNum')}
+                    +963 980 329 517
                   </a>
                 </p>
+
               </address>
+
             </div>
+
           </div>
-          
+
           <div className="text-center pt-8 border-t border-github-medium">
+
             <p className="text-github-text opacity-70 text-sm">
-              © {currentYear}   {t('nav.name')} {t('footer.rights')}.
+              © {currentYear} Jaafar. All rights reserved.
             </p>
+
           </div>
+
         </div>
       </div>
     </footer>

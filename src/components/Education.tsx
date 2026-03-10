@@ -1,87 +1,124 @@
-
-import { useTranslation } from 'react-i18next';
-import { GraduationCap, Award } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { GraduationCap, Award } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 interface Education {
-  degree: string;
+  title: string;
   institution: string;
   year: string;
   description: string;
-  type: 'degree' | 'certificate';
+  type: "degree" | "certificate";
 }
 
+const educationItems: Education[] = [
+  {
+    title: "Professional Experience",
+    institution: "Self Learning & Practical Development",
+    year: "2020 - 2025",
+    description:
+      "More than four years of practical experience in web development and software design. Recently expanded into Artificial Intelligence and Machine Learning through practical projects and experimentation.",
+    type: "degree",
+  },
+  {
+    title: "Bachelor's Degree",
+    institution: "University of Homs (Syria)",
+    year: "2020 - 2025",
+    description:
+      "Studied core computer science subjects including algorithms, software engineering, and system design while building several development projects.",
+    type: "degree",
+  },
+];
+
 const Education = () => {
-  const { t } = useTranslation();
-  
-  const educationItems: Education[] = [
-    {
-      degree:"Experience",
-      institution:"Learning" ,
-      year: '2019 - 2025',
-      description:" With 5 years of hands-on experience in web design, I have recently expanded my skill set by diving into the field of artificial intelligence, which I’ve been studying for approximately a year now",
-      type: 'degree'
-    },
-    {
-      degree: t('education.bachelors'),
-      institution: t('education.bachelorsInstitution'),
-      year: '2020 - 2025',
-      description: t('education.bachelorsDescription'),
-      type: 'degree'
-    },
-
-  ];
-
   return (
-    <section id="education" className="py-20 bg-github-medium/30 backdrop-blur-lg">
-      <div className="container mx-auto section-content">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('education.title')}</h2>
-            <p className="max-w-2xl mx-auto text-github-text opacity-80">
-              {t('education.description')}
-            </p>
-            <div className="h-1 w-20 bg-github-accent mx-auto mt-4"></div>
-          </div>
+    <section id="education" className="py-24 bg-github-darker/40">
 
-          <div className="relative">
-            {/* Vertical timeline line */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-github-accent/30 rounded-full"></div>
-            
-            <div className="space-y-12">
-              {educationItems.map((item, index) => (
-                <div key={index} className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                  {/* Timeline dot */}
-                  <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                    <div className="h-8 w-8 rounded-full border-4 border-github-darker bg-github-accent flex items-center justify-center shadow-lg shadow-github-accent/20">
-                      {item.type === 'degree' ? (
-                        <GraduationCap className="h-4 w-4 text-github-darker" />
-                      ) : (
-                        <Award className="h-4 w-4 text-github-darker" />
-                      )}
-                    </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className={`w-full  md:w-1/2  ${index % 2 === 0 ? 'ml-10 md:pl-0 md:pr-12' : ' mr-10 md:pr-0 md:pl-12'} pl-10`}>
-                    <Card className="bg-github-medium/80  backdrop-blur-md border border-github-accent/20 hover:border-github-accent/50 transition-all overflow-hidden group">
-                      <div className="p-6">
-                        <div className="text-sm text-github-accent font-medium mb-2">{item.year}</div>
-                        <h3 className="text-xl font-bold mb-1 group-hover:text-github-accent transition-colors">
-                          {item.degree}
-                        </h3>
-                        <p className="text-github-text opacity-90 font-medium">{item.institution}</p>
-                        <p className="mt-3 text-sm text-github-text/80">{item.description}</p>
-                      </div>
-                      <div className="h-1 w-full bg-gradient-to-r from-github-accent/0 via-github-accent to-github-accent/0"></div>
-                    </Card>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+      <div className="w-[92%] max-w-6xl mx-auto">
+
+        {/* Title */}
+
+        <div className="text-center mb-20">
+
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Education & Experience
+          </h2>
+
+          <p className="max-w-2xl mx-auto text-github-text opacity-80">
+            My journey in software engineering, development, and artificial intelligence.
+          </p>
+
+          <div className="h-1 w-20 bg-github-accent mx-auto mt-4"></div>
+
         </div>
+
+        {/* Cards */}
+
+        <div className="grid md:grid-cols-2 gap-8">
+
+          {educationItems.map((item, index) => {
+
+            const Icon = item.type === "degree" ? GraduationCap : Award;
+
+            return (
+
+              <Card
+                key={index}
+                className="p-8 bg-github-medium border border-github-medium hover:border-github-accent transition-all duration-300 group"
+              >
+
+                {/* Header */}
+
+                <div className="flex items-start justify-between mb-6">
+
+                  <div className="flex items-center gap-4">
+
+                    <div className="w-12 h-12 rounded-lg bg-github-accent/10 flex items-center justify-center">
+
+                      <Icon className="text-github-accent" size={22} />
+
+                    </div>
+
+                    <div>
+
+                      <h3 className="text-xl font-semibold group-hover:text-github-accent transition">
+
+                        {item.title}
+
+                      </h3>
+
+                      <p className="text-sm text-github-text/80">
+
+                        {item.institution}
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <span className="text-sm text-github-accent font-medium">
+
+                    {item.year}
+
+                  </span>
+
+                </div>
+
+                {/* Description */}
+
+                <p className="text-sm text-github-text/80 leading-relaxed">
+
+                  {item.description}
+
+                </p>
+
+              </Card>
+            );
+          })}
+
+        </div>
+
       </div>
+
     </section>
   );
 };

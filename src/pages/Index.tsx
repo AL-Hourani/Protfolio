@@ -1,6 +1,5 @@
 
 import { useEffect } from 'react';
-import ThreeScene from '@/components/ThreeScene';
 import Navbar from '@/components/Navbar';
 import Research from "@/components/Research";
 import Hero from '@/components/Hero';
@@ -9,7 +8,6 @@ import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import '@/i18n/config';
 import { useTranslation } from 'react-i18next';
 import Education from '@/components/Education';
 import Languages from '@/components/Languages';
@@ -32,9 +30,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-github-dark" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
-      {/* 3D animated background */}
-      <ThreeScene />
-      
+
       {/* Navigation */}
       <Navbar />
       
