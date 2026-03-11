@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ExternalLink, Github, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
-
+import { Button } from "./ui/button";
 import ipo from "../../public/images/po.png"
 import ipot from "../../public/images/poo.png"
 import ipor from "../../public/images/pth.png"
@@ -72,6 +72,13 @@ import PredictCalefoHose1 from "../../public/images/calPredicthouse1.png"
 import PredictCalefoHose2 from "../../public/images/calPredicthouse2.png"
 import PredictCalefoHose3 from "../../public/images/calPredicthouse3.png"
 import PredictCalefoHose4 from "../../public/images/calPredicthouse4.png"
+import SemanticSearchEngine1 from "../../public/images/SemanticSearchEngine1.png"
+import SemanticSearchEngine2 from "../../public/images/SemanticSearchEngine2.png"
+import AutomaticPatternDiscovery2 from "../../public/images/AutomaticPatternDiscovery2.png"
+import AutomaticPatternDiscovery1 from "../../public/images/AutomaticPatternDiscovery1.png"
+import SHAPexplains1 from "../../public/images/ExplainableAIDashboard1.png"
+import SHAPexplains2 from "../../public/images/ExplainableAIDashboard2.png"
+import SHAPexplains3 from "../../public/images/ExplainableAIDashboard3.png"
 
 type Project = {
   title: string;
@@ -121,10 +128,37 @@ const projects: Project[] = [
     status: "live"
   },
     {
+    title: "Simple Semantic Search Engine with Embeddings",
+    description: "A system that retrieves documents based on meaning rather than exact keywords by converting text into vector embeddings and measuring semantic similarity",
+    tags: ["python", "sklearn" , "TSNE", "sentence-transformers"],
+    images: [SemanticSearchEngine2 , SemanticSearchEngine1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
     title: "Nearest Neighbors regression",
     description: "A regression model built with the K-Nearest Neighbors algorithm that predicts continuous values by analyzing similarity between data points and evaluating prediction accuracy.",
     tags: ["python", "sklearn"],
     images: [NearestNeighborsregression , NearestNeighborsregression1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Simple Automatic Pattern Discovery in High-Dimensional Data",
+    description: "A machine learning system that automatically discovers hidden structures and clusters in complex high-dimensional datasets using modern manifold learning and density-based clustering.",
+    tags: ["python", "sklearn" , "HDBSCAN" ,"UMAP"],
+    images: [AutomaticPatternDiscovery2 , AutomaticPatternDiscovery1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Simple Explainable AI Dashboard",
+    description: "A system that explains machine learning model predictions by showing which features influenced the decision using explainability techniques.",
+    tags: ["python", "sklearn" , "shap"],
+    images: [SHAPexplains3 , SHAPexplains2 , SHAPexplains1],
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
@@ -397,116 +431,116 @@ const Projects = () => {
         {selectedProject && (
 
           <div   className="fixed inset-0  bg-black/80 flex items-center justify-center z-50 p-6">
+              <div className="bg-github-medium max-w-6xl w-full rounded-xl overflow-hidden relative">
 
-            <div className="bg-github-medium   max-w-4xl w-full rounded-xl overflow-hidden relative">
+  
 
-              {/* Close */}
+                    <div className="grid md:grid-cols-2">
 
-
-
-              {/* Image Slider */}
-              <div className="relative h-[400px] bg-black">
-
-                <img
-                  src={selectedProject.images[imageIndex]}
-                  className="w-full h-full object-contain"
-                />
-
-                {/* arrows */}
-                <button
-                  onClick={prevImage}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full"
-                >
-                  <ChevronLeft />
-                </button>
-
-                <button
-                  onClick={nextImage}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full"
-                >
-                  <ChevronRight />
-                </button>
-
-              </div>
+                  
 
 
-              {/* Dots */}
-              <div className="flex justify-center gap-2 py-3">
+                      {/* RIGHT SIDE (IMAGES) */}
+                      <div className="relative bg-black flex items-center justify-center">
 
-                {selectedProject.images.map((_, i) => (
+                        <img
+                          src={selectedProject.images[imageIndex]}
+                          className="w-full h-[420px] object-contain"
+                        />
 
-                  <span
-                    key={i}
-                    onClick={() => setImageIndex(i)}
-                    className={`w-3 h-3 rounded-full cursor-pointer
-                    ${i === imageIndex ? "bg-github-accent" : "bg-gray-500"}`}
-                  />
+                        {/* arrows */}
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full"
+                        >
+                          <ChevronLeft />
+                        </button>
 
-                ))}
-
-              </div>
-
-
-              {/* Content */}
-              <div className="p-6 space-y-4">
-
-                <h3 className="text-2xl font-bold">
-                  {selectedProject.title}
-                </h3>
-
-                <p className="text-github-text opacity-80">
-                  {selectedProject.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-
-                  {selectedProject.tags.map((tag, i) => (
-
-                    <span
-                      key={i}
-                      className="text-xs px-2 py-1 rounded bg-github-dark text-github-accent"
-                    >
-                      {tag}
-                    </span>
-
-                  ))}
-
-                </div>
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full"
+                        >
+                          <ChevronRight />
+                        </button>
 
 
-                <div className="flex gap-6 pt-4">
+                        {/* dots */}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
 
-                  <a
-                    href={selectedProject.githubUrl}
-                    target="_blank"
-                    className="flex items-center gap-2 hover:text-github-accent"
-                  >
-                    <Github size={18} />
-                    View Code
-                  </a>
+                          {selectedProject.images.map((_, i) => (
+                            <span
+                              key={i}
+                              onClick={() => setImageIndex(i)}
+                              className={`w-3 h-3 rounded-full cursor-pointer
+                              ${i === imageIndex ? "bg-github-accent" : "bg-gray-500"}`}
+                            />
+                          ))}
 
-                  <a
-                    href={selectedProject.liveUrl}
-                    target="_blank"
-                    className="flex items-center gap-2 hover:text-github-accent"
-                  >
-                    <ExternalLink size={18} />
-                    Live Demo
-                  </a>
+                        </div>
 
-              <button
-                onClick={closeProject}
-                className=" text-white"
-              >
-                <X />
-              </button>
+                        
 
-                </div>
+                      </div>
+                          {/* LEFT SIDE (DESCRIPTION) */}
+                      <div className="p-8 space-y-6 flex flex-col justify-center">
 
-              </div>
+                        <h3 className="text-3xl font-bold">
+                          {selectedProject.title}
+                        </h3>
 
-            </div>
+                        <p className="text-github-text opacity-80 leading-relaxed">
+                          {selectedProject.description}
+                        </p>
 
+                        <div className="flex flex-wrap gap-2">
+
+                          {selectedProject.tags.map((tag, i) => (
+                            <span
+                              key={i}
+                              className="text-xs px-3 py-1 rounded bg-github-dark text-github-accent"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+
+                        </div>
+
+                        <div className="flex gap-6 pt-4">
+
+                          <a
+                            href={selectedProject.githubUrl}
+                            target="_blank"
+                            className="flex items-center gap-2 hover:text-github-accent"
+                          >
+                            <Github size={18} />
+                            View Code
+                          </a>
+
+                          <a
+                            href={selectedProject.liveUrl}
+                            target="_blank"
+                            className="flex items-center gap-2 hover:text-github-accent"
+                          >
+                            <ExternalLink size={18} />
+                            Live Demo
+                          </a>
+
+
+
+                        </div>
+                                                   <Button
+                              onClick={closeProject}
+                              variant="outline"
+                              className="border-github-accent text-github-accent flex gap-2"
+                            >
+                              Close
+                            </Button>
+
+                      </div>
+
+                    </div>
+
+                  </div>
           </div>
 
         )}

@@ -85,7 +85,18 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex gap-6">
+            
+
+            <a
+              href="https://github.com/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-github-text hover:text-github-accent transition-colors"
+            >
+              <Github size={22} />
+            </a>
+
             <button
               className="text-github-text hover:text-github-accent"
               onClick={toggleMenu}
