@@ -79,6 +79,10 @@ import AutomaticPatternDiscovery1 from "../../public/images/AutomaticPatternDisc
 import SHAPexplains1 from "../../public/images/ExplainableAIDashboard1.png"
 import SHAPexplains2 from "../../public/images/ExplainableAIDashboard2.png"
 import SHAPexplains3 from "../../public/images/ExplainableAIDashboard3.png"
+import fashion1 from "../../public/images/fashin1.png"
+import fashion2 from "../../public/images/fashin2.png"
+import fashion3 from "../../public/images/fashin3.png"
+import fashion4 from "../../public/images/fashin4.png"
 
 type Project = {
   title: string;
@@ -105,6 +109,15 @@ const projects: Project[] = [
     description: "Build a collaborative filtering system to suggest movies to users based on their ratings and similarity with other users",
     tags: ["python", "sklearn"],
     images: [recomm4 , recomm3 , recomm2 , recomm1 ],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Fashion MNIST Image Classification",
+    description: "A machine learning model that classifies grayscale images of clothing items (such as shirts, shoes, and bags) into predefined categories using a neural network trained on the Fashion MNIST dataset.",
+    tags: ["python", "sklearn" , "Deep learning" , "TensorFlow"],
+    images: [fashion1 , fashion2 , fashion3, fashion4],
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
@@ -339,6 +352,9 @@ const Projects = () => {
 
           <p className="text-github-text opacity-80">
             Explore some of my recent work and machine learning projects.
+          </p>
+          <p className="text-github-text opacity-80">
+            Click any project to show more data and images
           </p>
 
           <div className="h-1 w-20 bg-github-accent mx-auto mt-4"></div>

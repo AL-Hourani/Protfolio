@@ -19,7 +19,7 @@ const Footer = () => {
 
             <div className="flex space-x-6">
               <a
-                href="#"
+                href="https://github.com/AL-Hourani"
                 className="text-github-text hover:text-github-accent transition-colors"
                 aria-label="GitHub"
               >

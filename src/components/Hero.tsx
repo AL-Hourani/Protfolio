@@ -1,5 +1,6 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FileDown } from "lucide-react";
 
 
 const techStack = [
@@ -78,7 +79,7 @@ const Hero = () => {
             <div className="flex gap-4 pt-2">
 
               <Button
-                className="bg-github-blue flex items-center gap-2 px-6 py-6"
+                className="bg-github-blue w-full flex items-center gap-2 px-6 py-6"
                 onClick={scrollToContact}
               >
                 Contact Me <ArrowRight size={18} />
@@ -86,7 +87,7 @@ const Hero = () => {
 
               <Button
                 variant="outline"
-                className="border-github-accent text-github-accent px-6 py-6"
+                className="border-github-accent w-full text-github-accent px-6 py-6"
                 onClick={() =>
                   document
                     .getElementById("projects")
@@ -98,11 +99,21 @@ const Hero = () => {
 
             </div>
 
+           
+
             {/* Social Icons */}
             <div className="flex gap-4 pt-4">
-
+              <a href="/public/Jaafar_Alhourani_cv.pdf" download>
+                 <Button
+                      variant="outline"
+                     className="border-github-accent flex-1 text-github-accent flex gap-2"
+                    >
+                      <FileDown size={18} />
+                              Download CV
+                </Button>
+                </a>
               <a
-                href="https://github.com/YOUR_USERNAME"
+                href="https://github.com/AL-Hourani"
                 target="_blank"
                 className="p-3 rounded-lg bg-github-medium hover:bg-github-accent transition"
               >
@@ -111,7 +122,7 @@ const Hero = () => {
 
 
               <a
-                href="mailto:your@email.com"
+                href="mailto:jalhourani3@gmail.com"
                 className="p-3 rounded-lg bg-github-medium hover:bg-github-accent transition"
               >
                 <Mail size={20} />

@@ -75,8 +75,8 @@ const Navbar = () => {
             ))}
             <span className='w-0.5 h-8 rounded-sm bg-slate-300'></span>
             <a
-              href="https://github.com/YOUR_USERNAME"
-              target="_blank"
+                  href="https://github.com/AL-Hourani"
+                target="_blank"
               rel="noopener noreferrer"
               className="text-github-text hover:text-github-accent transition-colors"
             >
@@ -89,9 +89,9 @@ const Navbar = () => {
             
 
             <a
-              href="https://github.com/YOUR_USERNAME"
-              target="_blank"
-              rel="noopener noreferrer"
+              
+             href="https://github.com/AL-Hourani"
+                target="_blank"
               className="text-github-text hover:text-github-accent transition-colors"
             >
               <Github size={22} />
