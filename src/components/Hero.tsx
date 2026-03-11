@@ -103,7 +103,7 @@ const Hero = () => {
 
             {/* Social Icons */}
             <div className="flex gap-4 pt-4">
-              <a href="/public/Jaafar_Alhourani_cv.pdf" download>
+              <a href="/public/Jaafar_Alhourani_cv.pdf" download = "Jaafar_Alhourani_cv.pdf">
                  <Button
                       variant="outline"
                      className="border-github-accent flex-1 text-github-accent flex gap-2"

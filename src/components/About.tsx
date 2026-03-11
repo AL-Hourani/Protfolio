@@ -66,7 +66,7 @@ const About = () => {
 
             {/* Download CV */}
             <div className="pt-6">
-              <a href="/public/Jaafar_Alhourani_cv.pdf" download>
+              <a href="../../public/Jaafar_Alhourani_cv.pdf" download>
                 <Button
                   variant="outline"
                   className="border-github-accent text-github-accent flex gap-2"
