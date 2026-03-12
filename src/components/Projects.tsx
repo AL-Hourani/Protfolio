@@ -86,6 +86,12 @@ import fashion4 from "../../public/images/fashin4.png"
 import forset1 from "../../public/images/forset1.png"
 import forset2 from "../../public/images/forset2.png"
 import forset3 from "../../public/images/forset3.png"
+import star1 from "../../public/images/star1.png"
+import star2 from "../../public/images/star2.png"
+import star3 from "../../public/images/star3.png"
+import star4 from "../../public/images/star4.png"
+import radar1 from "../../public/images/radar1.png"
+import radar2 from "../../public/images/radar2.png"
 
 type Project = {
   title: string;
@@ -112,6 +118,15 @@ const projects: Project[] = [
     description: "Build a collaborative filtering system to suggest movies to users based on their ratings and similarity with other users",
     tags: ["python", "sklearn"],
     images: [recomm4 , recomm3 , recomm2 , recomm1 ],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Exoplanet Detection using Machine Learning",
+    description: "Build a machine learning model to detect exoplanets by analyzing the brightness of stars over time. When a planet passes in front of a star, the star’s brightness slightly decreases. This small dip can indicate the presence of a planet.",
+    tags: ["python", "sklearn"],
+    images: [star4 , star3 , star2, star1 ],
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
@@ -166,6 +181,15 @@ const projects: Project[] = [
     description: "A regression model built with the K-Nearest Neighbors algorithm that predicts continuous values by analyzing similarity between data points and evaluating prediction accuracy.",
     tags: ["python", "sklearn"],
     images: [NearestNeighborsregression , NearestNeighborsregression1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Machine Learning Model Comparison using Radar Chart",
+    description: "Train multiple machine learning models on a real dataset, evaluate them using metrics such as Accuracy, Precision, Recall, F1-Score, and ROC-AUC, and visualize the performance comparison using a Radar Chart to quickly identify the strengths and weaknesses of each model",
+    tags: ["python", "sklearn"],
+    images: [radar2 , radar1],
     githubUrl: "#",
     liveUrl: "#",
     status: "live"

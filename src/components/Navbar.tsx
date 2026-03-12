@@ -111,7 +111,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-github-medium rounded-b-xl animate-fade-in">
+        <div className="md:hidden bg-github-darker/70 rounded-b-xl animate-fade-in">
           <div className="flex flex-col px-6 py-4 gap-4">
             {navItems.map((item) => (
               <button
