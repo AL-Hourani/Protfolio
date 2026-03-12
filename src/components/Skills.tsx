@@ -6,7 +6,7 @@ import {
   Cpu,
   GitBranch,
   Box,
-  Wrench
+  
 } from "lucide-react";
 
 type Skill = {
@@ -16,136 +16,65 @@ type Skill = {
 };
 
 const skills: Skill[] = [
-
-  // Frontend
   { name: "HTML & CSS", icon: Globe, category: "frontend" },
   { name: "JavaScript", icon: Code, category: "frontend" },
   { name: "React.js", icon: Code, category: "frontend" },
   { name: "TypeScript", icon: Code, category: "frontend" },
-  { name: "Three.js", icon: Box, category: "frontend" },
-
-  // Backend
   { name: "Golang", icon: Server, category: "backend" },
-  { name: "Node.js", icon: Server, category: "backend" },
-  { name: "Express", icon: Server, category: "backend" },
   { name: "MongoDB", icon: Database, category: "backend" },
   { name: "PostgreSQL", icon: Database, category: "backend" },
   { name: "REST API", icon: Server, category: "backend" },
-
-  // AI
   { name: "Machine Learning", icon: Cpu, category: "ai" },
+  { name: "Data Mining", icon: Database, category: "ai" },
   { name: "PyTorch", icon: Cpu, category: "ai" },
   { name: "Computer Vision", icon: Cpu, category: "ai" },
-
-  // Tools
   { name: "Git & GitHub", icon: GitBranch, category: "tools" },
   { name: "Docker", icon: Box, category: "tools" },
-  { name: "Figma", icon: Wrench, category: "tools" },
 ];
 
 const Skills = () => {
+  const categories = ["frontend", "backend", "ai", "tools"];
 
-  const frontend = skills.filter(s => s.category === "frontend");
-  const backend = skills.filter(s => s.category === "backend");
-  const ai = skills.filter(s => s.category === "ai");
-  const tools = skills.filter(s => s.category === "tools");
-
-  const SkillCard = ({ skill }: { skill: Skill }) => {
-    const Icon = skill.icon;
-
-    return (
-      <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-github-medium border border-github-medium hover:border-github-accent transition">
-        <Icon size={20} className="text-github-accent"/>
-        <span className="text-sm">{skill.name}</span>
-      </div>
-    );
+  const categoryNames: { [key: string]: string } = {
+    frontend: "Frontend",
+    backend: "Backend",
+    ai: "AI / Machine Learning",
+    tools: "Tools",
   };
 
   return (
-    <section id="skills" className="py-24 bg-github-darker/50">
+    <section id="skills" className="py-24 bg-gradient-to-b from-github-dark to-github-darker">
+      <div className="w-[92%] max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-4 text-github-accent">Skills & Technologies</h2>
+        <p className="max-w-2xl mx-auto text-github-text opacity-80 mb-12">
+          Modern technologies and tools I use to build applications, backend systems, and AI solutions.
+        </p>
 
-      <div className="w-[92%] max-w-6xl mx-auto">
-
-        {/* Title */}
-
-        <div className="text-center mb-16">
-
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Skills & Technologies
-          </h2>
-
-          <p className="max-w-2xl mx-auto text-github-text opacity-80">
-            Technologies and tools I use to build modern applications, backend systems, and AI solutions.
-          </p>
-
-          <div className="h-1 w-20 bg-github-accent mx-auto mt-4"></div>
-
+        <div className="grid md:grid-cols-2 gap-10">
+          {categories.map((cat) => {
+            const catSkills = skills.filter((s) => s.category === cat);
+            return (
+              <div key={cat}>
+                <h3 className="text-2xl font-semibold mb-6 text-github-accent">{categoryNames[cat]}</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {catSkills.map((skill, i) => {
+                    const Icon = skill.icon;
+                    return (
+                      <div
+                        key={i}
+                        className="group flex flex-col items-center p-4 bg-github-medium rounded-xl border border-github-dark hover:border-github-accent hover:scale-105 transition-transform duration-300 cursor-pointer"
+                      >
+                        <Icon size={36} className="text-github-accent mb-2 group-hover:text-white transition-colors"/>
+                        <span className="text-sm text-github-text opacity-90 group-hover:text-white">{skill.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
-
-        {/* Grid */}
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-
-          {/* Frontend */}
-
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-github-accent">
-              Frontend
-            </h3>
-
-            <div className="space-y-3">
-              {frontend.map((skill, i) => (
-                <SkillCard key={i} skill={skill} />
-              ))}
-            </div>
-          </div>
-
-          {/* Backend */}
-
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-github-accent">
-              Backend
-            </h3>
-
-            <div className="space-y-3">
-              {backend.map((skill, i) => (
-                <SkillCard key={i} skill={skill} />
-              ))}
-            </div>
-          </div>
-
-          {/* AI */}
-
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-github-accent">
-              AI / Machine Learning
-            </h3>
-
-            <div className="space-y-3">
-              {ai.map((skill, i) => (
-                <SkillCard key={i} skill={skill} />
-              ))}
-            </div>
-          </div>
-
-          {/* Tools */}
-
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-github-accent">
-              Tools
-            </h3>
-
-            <div className="space-y-3">
-              {tools.map((skill, i) => (
-                <SkillCard key={i} skill={skill} />
-              ))}
-            </div>
-          </div>
-
-        </div>
-
       </div>
-
     </section>
   );
 };

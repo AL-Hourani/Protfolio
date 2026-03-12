@@ -83,6 +83,9 @@ import fashion1 from "../../public/images/fashin1.png"
 import fashion2 from "../../public/images/fashin2.png"
 import fashion3 from "../../public/images/fashin3.png"
 import fashion4 from "../../public/images/fashin4.png"
+import forset1 from "../../public/images/forset1.png"
+import forset2 from "../../public/images/forset2.png"
+import forset3 from "../../public/images/forset3.png"
 
 type Project = {
   title: string;
@@ -118,6 +121,15 @@ const projects: Project[] = [
     description: "A machine learning model that classifies grayscale images of clothing items (such as shirts, shoes, and bags) into predefined categories using a neural network trained on the Fashion MNIST dataset.",
     tags: ["python", "sklearn" , "Deep learning" , "TensorFlow"],
     images: [fashion1 , fashion2 , fashion3, fashion4],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Forest Fire Prediction",
+    description: "Predict the likelihood of forest fires using meteorological and geographical data. This project is useful for early warning systems in environmental monitoring and disaster management.",
+    tags: ["python", "sklearn"],
+    images: [forset3 , forset2 , forset1],
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
