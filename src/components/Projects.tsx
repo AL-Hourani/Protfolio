@@ -97,6 +97,12 @@ import airbnb2 from "../../public/images/airbnb2.png"
 import airbnb3 from "../../public/images/airbnb3.png"
 import airbnb4 from "../../public/images/airbnb4.png"
 import airbnb5 from "../../public/images/airbnb5.png"
+import news1 from "../../public/images/news1.png"
+import news2 from "../../public/images/news2.png"
+import news3 from "../../public/images/news3.png"
+import news4 from "../../public/images/news4.png"
+import news5 from "../../public/images/news5.png"
+
 
 
 type Project = {
@@ -156,6 +162,15 @@ const projects: Project[] = [
     status: "live"
   },
     {
+    title: "Fake News Detection System Using Machine Learning",
+    description: "This project uses Natural Language Processing (NLP) and machine learning techniques to analyze news articles and classify them as either real or fake. The model converts text data into numerical features using TF-IDF and trains a classification algorithm such as Logistic Regression to predict the credibility of news content.",
+    tags: ["python", "sklearn" , "NLP"],
+    images: [news5 , news4 , news3, news2 , news1],
+    githubUrl: "",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
     title: "Credit Card Fraud Detection",
     description: "Predict fraudulent transactions using imbalanced financial datasets. Focus on precision, recall, and anomaly detection methods.",
     tags: ["python", "sklearn"],
@@ -169,7 +184,7 @@ const projects: Project[] = [
     description: "An example showing how the scikit-learn can be used to recognize images of hand-written digits.",
     tags: ["python", "sklearn"],
     images: [digtit1 , digtit2 , digtit3 ,digtit4,digtit5],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/handwritten-digit-recognition",
     liveUrl: "#",
     status: "live"
   },
@@ -178,7 +193,7 @@ const projects: Project[] = [
     description: "A system that retrieves documents based on meaning rather than exact keywords by converting text into vector embeddings and measuring semantic similarity",
     tags: ["python", "sklearn" , "TSNE", "sentence-transformers"],
     images: [SemanticSearchEngine2 , SemanticSearchEngine1],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/semantic-search-engine",
     liveUrl: "#",
     status: "live"
   },
@@ -196,7 +211,7 @@ const projects: Project[] = [
     description: "Train multiple machine learning models on a real dataset, evaluate them using metrics such as Accuracy, Precision, Recall, F1-Score, and ROC-AUC, and visualize the performance comparison using a Radar Chart to quickly identify the strengths and weaknesses of each model",
     tags: ["python", "sklearn"],
     images: [radar2 , radar1],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/model-comparison-rada",
     liveUrl: "#",
     status: "live"
   },
@@ -205,7 +220,7 @@ const projects: Project[] = [
     description: "A machine learning system that automatically discovers hidden structures and clusters in complex high-dimensional datasets using modern manifold learning and density-based clustering.",
     tags: ["python", "sklearn" , "HDBSCAN" ,"UMAP"],
     images: [AutomaticPatternDiscovery2 , AutomaticPatternDiscovery1],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/high-dimensional-pattern-discovery",
     liveUrl: "#",
     status: "live"
   },
