@@ -92,6 +92,12 @@ import star3 from "../../public/images/star3.png"
 import star4 from "../../public/images/star4.png"
 import radar1 from "../../public/images/radar1.png"
 import radar2 from "../../public/images/radar2.png"
+import airbnb1 from "../../public/images/airbnb1.png"
+import airbnb2 from "../../public/images/airbnb2.png"
+import airbnb3 from "../../public/images/airbnb3.png"
+import airbnb4 from "../../public/images/airbnb4.png"
+import airbnb5 from "../../public/images/airbnb5.png"
+
 
 type Project = {
   title: string;
@@ -109,8 +115,8 @@ const projects: Project[] = [
     description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
     tags: ["python", "sklearn"],
     images: [shopping1 , shopping2 , shopping3],
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/customer-shopping-clustering",
+    liveUrl: "",
     status: "live"
   },
     {
@@ -118,7 +124,7 @@ const projects: Project[] = [
     description: "Build a collaborative filtering system to suggest movies to users based on their ratings and similarity with other users",
     tags: ["python", "sklearn"],
     images: [recomm4 , recomm3 , recomm2 , recomm1 ],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/movie-recommendation-system",
     liveUrl: "#",
     status: "live"
   },
@@ -127,7 +133,7 @@ const projects: Project[] = [
     description: "Build a machine learning model to detect exoplanets by analyzing the brightness of stars over time. When a planet passes in front of a star, the star’s brightness slightly decreases. This small dip can indicate the presence of a planet.",
     tags: ["python", "sklearn"],
     images: [star4 , star3 , star2, star1 ],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/exoplanet-detection-ml",
     liveUrl: "#",
     status: "live"
   },
@@ -136,7 +142,7 @@ const projects: Project[] = [
     description: "A machine learning model that classifies grayscale images of clothing items (such as shirts, shoes, and bags) into predefined categories using a neural network trained on the Fashion MNIST dataset.",
     tags: ["python", "sklearn" , "Deep learning" , "TensorFlow"],
     images: [fashion1 , fashion2 , fashion3, fashion4],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/fashion-mnist-classification",
     liveUrl: "#",
     status: "live"
   },
@@ -145,7 +151,7 @@ const projects: Project[] = [
     description: "Predict the likelihood of forest fires using meteorological and geographical data. This project is useful for early warning systems in environmental monitoring and disaster management.",
     tags: ["python", "sklearn"],
     images: [forset3 , forset2 , forset1],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/forest-fire-prediction",
     liveUrl: "#",
     status: "live"
   },
@@ -153,8 +159,8 @@ const projects: Project[] = [
     title: "Credit Card Fraud Detection",
     description: "Predict fraudulent transactions using imbalanced financial datasets. Focus on precision, recall, and anomaly detection methods.",
     tags: ["python", "sklearn"],
-    images: [fraud1 , fraud2 , fraud3, fraud4 ],
-    githubUrl: "#",
+    images: [fraud4 ,fraud1 , fraud2 , fraud3],
+    githubUrl: "https://github.com/AL-Hourani/credit-card-fraud-detection",
     liveUrl: "#",
     status: "live"
   },
@@ -208,6 +214,15 @@ const projects: Project[] = [
     description: "A system that explains machine learning model predictions by showing which features influenced the decision using explainability techniques.",
     tags: ["python", "sklearn" , "shap"],
     images: [SHAPexplains3 , SHAPexplains2 , SHAPexplains1],
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Airbnb Price Prediction",
+    description: "Predicting Airbnb rental prices based on multiple features such as number of bedrooms, bathrooms, minimum nights, and guest capacity. This project demonstrates data analysis, feature engineering, regression modeling, and visualization.",
+    tags: ["python", "sklearn" , "shap"],
+    images: [airbnb5 , airbnb4 , airbnb3 , airbnb2 , airbnb1],
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
