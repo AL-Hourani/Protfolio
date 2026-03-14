@@ -102,6 +102,11 @@ import news2 from "../../public/images/news2.png"
 import news3 from "../../public/images/news3.png"
 import news4 from "../../public/images/news4.png"
 import news5 from "../../public/images/news5.png"
+import earth1 from "../../public/images/earth1.png"
+import earth2 from "../../public/images/earth2.png"
+import earth3 from "../../public/images/earth3.png"
+import earth4 from "../../public/images/earth4.png"
+
 
 
 
@@ -197,6 +202,16 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
   },
+
+    {
+    title: "Earthquake Magnitude Prediction Using Machine Learning",
+    description: "This project focuses on analyzing earthquake data and building a machine learning model to predict earthquake magnitude based on geological features such as depth, latitude, and longitude.",
+    tags: ["python", "sklearn"],
+    images: [earth1 , earth2, earth4 , earth4 ],
+    githubUrl: "https://github.com/AL-Hourani/earthquake-magnitude-prediction",
+    liveUrl: "#",
+    status: "live"
+  },
     {
     title: "Nearest Neighbors regression",
     description: "A regression model built with the K-Nearest Neighbors algorithm that predicts continuous values by analyzing similarity between data points and evaluating prediction accuracy.",
@@ -238,7 +253,7 @@ const projects: Project[] = [
     description: "Predicting Airbnb rental prices based on multiple features such as number of bedrooms, bathrooms, minimum nights, and guest capacity. This project demonstrates data analysis, feature engineering, regression modeling, and visualization.",
     tags: ["python", "sklearn" , "shap"],
     images: [airbnb5 , airbnb4 , airbnb3 , airbnb2 , airbnb1],
-    githubUrl: "#",
+    githubUrl: "https://github.com/AL-Hourani/airbnb-price-prediction",
     liveUrl: "#",
     status: "live"
   },
@@ -466,7 +481,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-github-text opacity-80 line-clamp-2">
+                <p className="text-sm  text-github-text opacity-80 line-clamp-2">
                   {project.description}
                 </p>
 
@@ -566,11 +581,11 @@ const Projects = () => {
                           {/* LEFT SIDE (DESCRIPTION) */}
                       <div className="p-8 space-y-6 flex flex-col justify-center">
 
-                        <h3 className="text-3xl font-bold">
+                        <h3 className="md:text-3xl text-xl font-bold">
                           {selectedProject.title}
                         </h3>
 
-                        <p className="text-github-text opacity-80 leading-relaxed">
+                        <p className="text-github-text hidden md:block opacity-80 leading-relaxed">
                           {selectedProject.description}
                         </p>
 
