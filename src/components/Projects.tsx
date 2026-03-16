@@ -211,6 +211,14 @@ const OutlierDetection = [
 ]
 
 
+const NewsEntity  = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773653554/nlpa3_yznpmk.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773653546/nlpa1_cihr9t.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773653545/nlpa2_inw81m.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773653547/nlpa4_oedf1j.png"
+]
+
+
 
 
 
@@ -236,7 +244,7 @@ const projects: Project[] = [
     {
     title: "Shopping data clustering for customers",
     description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: ShoppingDataClustering,
     githubUrl: "https://github.com/AL-Hourani/customer-shopping-clustering",
     liveUrl: "",
@@ -245,7 +253,7 @@ const projects: Project[] = [
     {
     title: "Movie Recommendation System",
     description: "Build a collaborative filtering system to suggest movies to users based on their ratings and similarity with other users",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: MovieRecommendation,
     githubUrl: "https://github.com/AL-Hourani/movie-recommendation-system",
     liveUrl: "#",
@@ -254,7 +262,7 @@ const projects: Project[] = [
     {
     title: "Exoplanet Detection using Machine Learning",
     description: "Build a machine learning model to detect exoplanets by analyzing the brightness of stars over time. When a planet passes in front of a star, the star’s brightness slightly decreases. This small dip can indicate the presence of a planet.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: ExoplanetDetection,
     githubUrl: "https://github.com/AL-Hourani/exoplanet-detection-ml",
     liveUrl: "#",
@@ -263,7 +271,7 @@ const projects: Project[] = [
     {
     title: "Fashion MNIST Image Classification",
     description: "A machine learning model that classifies grayscale images of clothing items (such as shirts, shoes, and bags) into predefined categories using a neural network trained on the Fashion MNIST dataset.",
-    tags: ["python", "sklearn" , "Deep learning" , "TensorFlow"],
+    tags: ["Deep Learning"],
     images: FashionMNIST,
     githubUrl: "https://github.com/AL-Hourani/fashion-mnist-classification",
     liveUrl: "#",
@@ -272,7 +280,7 @@ const projects: Project[] = [
     {
     title: "Forest Fire Prediction",
     description: "Predict the likelihood of forest fires using meteorological and geographical data. This project is useful for early warning systems in environmental monitoring and disaster management.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: ForestFire,
     githubUrl: "https://github.com/AL-Hourani/forest-fire-prediction",
     liveUrl: "#",
@@ -281,7 +289,7 @@ const projects: Project[] = [
     {
     title: "Fake News Detection System Using Machine Learning",
     description: "This project uses Natural Language Processing (NLP) and machine learning techniques to analyze news articles and classify them as either real or fake. The model converts text data into numerical features using TF-IDF and trains a classification algorithm such as Logistic Regression to predict the credibility of news content.",
-    tags: ["python", "sklearn" , "NLP"],
+    tags: ["NLP"],
     images: FakeNewsDetectio,
     githubUrl: "",
     liveUrl: "#",
@@ -290,7 +298,7 @@ const projects: Project[] = [
     {
     title: "Credit Card Fraud Detection",
     description: "Predict fraudulent transactions using imbalanced financial datasets. Focus on precision, recall, and anomaly detection methods.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: CreditCardFraud,
     githubUrl: "https://github.com/AL-Hourani/credit-card-fraud-detection",
     liveUrl: "#",
@@ -299,7 +307,7 @@ const projects: Project[] = [
     {
     title: "Recognizing hand-written digits",
     description: "An example showing how the scikit-learn can be used to recognize images of hand-written digits.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: handWrittendigits,
     githubUrl: "https://github.com/AL-Hourani/handwritten-digit-recognition",
     liveUrl: "#",
@@ -308,9 +316,18 @@ const projects: Project[] = [
     {
     title: "Simple Semantic Search Engine with Embeddings",
     description: "A system that retrieves documents based on meaning rather than exact keywords by converting text into vector embeddings and measuring semantic similarity",
-    tags: ["python", "sklearn" , "TSNE", "sentence-transformers"],
+    tags: ["NLP"],
     images: SimpleSemanticSearchEngine,
     githubUrl: "https://github.com/AL-Hourani/semantic-search-engine",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "News Entity & POS Analysis",
+    description: "A comprehensive NLP project that analyzes news articles to extract entities, parts of speech, and word frequencies.The project visualizes linguistic patterns using Matplotlib and Seaborn, making it easy to explore the text data and spot trends",
+    tags: ["NLP"],
+    images: NewsEntity,
+    githubUrl: "https://github.com/AL-Hourani/news-entity-pos-analysis",
     liveUrl: "#",
     status: "live"
   },
@@ -318,7 +335,7 @@ const projects: Project[] = [
     {
     title: "Earthquake Magnitude Prediction Using Machine Learning",
     description: "This project focuses on analyzing earthquake data and building a machine learning model to predict earthquake magnitude based on geological features such as depth, latitude, and longitude.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: EarthquakeMagnitudePrediction,
     githubUrl: "https://github.com/AL-Hourani/earthquake-magnitude-prediction",
     liveUrl: "#",
@@ -327,7 +344,7 @@ const projects: Project[] = [
     {
     title: "Car Fuel Consumption Prediction Using Machine Learning",
     description: "This project focuses on predicting a car’s fuel consumption based on several vehicle characteristics such as engine size, horsepower, weight, and the number of cylinders. The goal is to build a machine learning model that can estimate how much fuel a vehicle will consume under normal conditions",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images:CarFuelConsumptionPrediction,
     githubUrl: "https://github.com/AL-Hourani/car-fuel-consumption-prediction",
     liveUrl: "#",
@@ -336,7 +353,7 @@ const projects: Project[] = [
     {
     title: "Music Popularity Prediction Using Machine Learning",
     description: "This project focuses on predicting the popularity of songs based on their audio features such as tempo, energy, danceability, loudness, and acousticness. By analyzing these musical characteristics, the model learns patterns that are commonly associated with popular songs",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: MusicPopularityPrediction,
     githubUrl: "https://github.com/AL-Hourani/music-popularity-prediction",
     liveUrl: "#",
@@ -345,7 +362,7 @@ const projects: Project[] = [
     {
     title: "Nearest Neighbors regression",
     description: "A regression model built with the K-Nearest Neighbors algorithm that predicts continuous values by analyzing similarity between data points and evaluating prediction accuracy.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: NearestNeighborsRegression,
     githubUrl: "#",
     liveUrl: "#",
@@ -354,7 +371,7 @@ const projects: Project[] = [
     {
     title: "Machine Learning Model Comparison using Radar Chart",
     description: "Train multiple machine learning models on a real dataset, evaluate them using metrics such as Accuracy, Precision, Recall, F1-Score, and ROC-AUC, and visualize the performance comparison using a Radar Chart to quickly identify the strengths and weaknesses of each model",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: ModelComparisonRadar,
     githubUrl: "https://github.com/AL-Hourani/model-comparison-rada",
     liveUrl: "#",
@@ -363,7 +380,7 @@ const projects: Project[] = [
     {
     title: "Simple Automatic Pattern Discovery in High-Dimensional Data",
     description: "A machine learning system that automatically discovers hidden structures and clusters in complex high-dimensional datasets using modern manifold learning and density-based clustering.",
-    tags: ["python", "sklearn" , "HDBSCAN" ,"UMAP"],
+    tags: ["sklearn" ],
     images: AutomaticPatternDiscovery,
     githubUrl: "https://github.com/AL-Hourani/high-dimensional-pattern-discovery",
     liveUrl: "#",
@@ -372,7 +389,7 @@ const projects: Project[] = [
     {
     title: "Simple Explainable AI Dashboard",
     description: "A system that explains machine learning model predictions by showing which features influenced the decision using explainability techniques.",
-    tags: ["python", "sklearn" , "shap"],
+    tags: ["sklearn"],
     images:SimpleExplainable,
     githubUrl: "#",
     liveUrl: "#",
@@ -381,7 +398,7 @@ const projects: Project[] = [
     {
     title: "Airbnb Price Prediction",
     description: "Predicting Airbnb rental prices based on multiple features such as number of bedrooms, bathrooms, minimum nights, and guest capacity. This project demonstrates data analysis, feature engineering, regression modeling, and visualization.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: AirbnbPricePrediction,
     githubUrl: "https://github.com/AL-Hourani/airbnb-price-prediction",
     liveUrl: "#",
@@ -390,7 +407,7 @@ const projects: Project[] = [
     {
     title: "California House Price Prediction",
     description: "Predict house prices in California using features like location, number of bedrooms, population, and median income. Apply Linear Regression or Gradient Boosting.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: CaliforniaHousePrice,
     githubUrl: "#",
     liveUrl: "#",
@@ -408,7 +425,7 @@ const projects: Project[] = [
     {
     title: "Nearest Neighbors Classification",
     description: "A supervised learning model using the K-Nearest Neighbors algorithm to classify data points based on the closest labeled examples in the dataset.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: NearestNeighborsClassification,
     githubUrl: "#",
     liveUrl: "#",
@@ -417,7 +434,7 @@ const projects: Project[] = [
    {
     title: "Outlier detection",
     description: "A machine learning system designed to detect abnormal or rare data points in datasets using anomaly detection techniques implemented with Scikit-Learn.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images:OutlierDetection,
     githubUrl: "#",
     liveUrl: "#",
@@ -426,7 +443,7 @@ const projects: Project[] = [
     {
     title: "Heart disease classification  using sklearn",
     description: "A machine learning model that classifies heart disease presence based on medical features using Scikit-Learn classification algorithms, with performance evaluation and visualization.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: HeartDiseaseClassification,
     githubUrl: "#",
     liveUrl: "#",
@@ -435,7 +452,7 @@ const projects: Project[] = [
     {
     title: "Heart disease classification  using different sklearn algorithms",
     description: "A comparative study of multiple classification algorithms (Logistic Regression, SVM, KNN, Decision Tree, etc.) to identify the most effective model for heart disease prediction.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: HeartDiseaseClassificationDiff,
     githubUrl: "#",
     liveUrl: "#",
@@ -444,7 +461,7 @@ const projects: Project[] = [
     {
     title: "House predict using Deep learning",
     description:"A deep learning model built with Keras to predict house prices based on numerical features, demonstrating neural network training, evaluation, and prediction accuracy",
-    tags: ["python", "keras"],
+    tags: ["Deep Learning"],
     images:HousepredictDL,
     githubUrl: "#",
     liveUrl: "#",
@@ -453,7 +470,7 @@ const projects: Project[] = [
     {
     title: "LSTM Time Series Prediction",
     description: "A practical implementation of an LSTM network for time series forecasting, showing how sequential data patterns are learned and used to predict future values.",
-    tags: ["python", "LSTM"],
+    tags: ["LSTM"],
     images: LSTMTimeSeries,
     githubUrl: "#",
     liveUrl: "#",
@@ -462,7 +479,7 @@ const projects: Project[] = [
   {
     title: "Simple K-Means Clustering using Scikit-Learn",
     description: "An introductory implementation of the K-Means clustering algorithm for unsupervised learning, including cluster visualization and interpretation.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: SimpleKMeansClustering,
     githubUrl: "#",
     liveUrl: "#",
@@ -471,7 +488,7 @@ const projects: Project[] = [
     {
     title: "Support Vector Machine (SVM) using Scikit-Learn",
     description: "A classification model using Support Vector Machines that demonstrates data separation, decision boundaries, and margin visualization.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: SimpleSupportVectorMachine,
     githubUrl: "#",
     liveUrl: "#",
@@ -480,7 +497,7 @@ const projects: Project[] = [
   {
     title: "Simple Logistic Regression using Scikit-Learn",
     description: "A binary classification example using Logistic Regression, highlighting probability estimation and decision boundary visualization.",
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: SimpleLogisticRegression,
     githubUrl: "#",
     liveUrl: "#",
@@ -489,7 +506,7 @@ const projects: Project[] = [
   {
     title: "Simple Linear Regression using Scikit-Learn",
     description:"A basic linear regression model that learns relationships between variables and predicts continuous values, with graphical representation of the regression line." ,
-    tags: ["python", "sklearn"],
+    tags: ["sklearn"],
     images: SimpleLinearRegression,
     githubUrl: "#",
     liveUrl: "#",
@@ -498,7 +515,7 @@ const projects: Project[] = [
   {
     title: "service health monitor (VIGIL)",
     description: "A monitoring system built with Go for tracking the availability and performance of critical services. Provides real-time alerts, logs, and dashboards to ensure system reliability and rapid issue resolution.",
-    tags: ["React", "python", "Golang"],
+    tags: ["React", "Golang"],
     images:vigilProject,
     githubUrl: "#",
     liveUrl: "#",
