@@ -218,6 +218,36 @@ const NewsEntity  = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773653547/nlpa4_oedf1j.png"
 ]
 
+const ProductDemandForecasting = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738813/store3_h8lctd.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738817/store4_cqpzx3.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738807/store1_pbq9iz.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738820/store5_hvibtk.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738812/store2_jnmaak.png"
+]
+const AuthorIdentification = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738823/author1_beonsi.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738824/author2_hzsw60.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738824/author3_y81ttv.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773738809/author4_lz9w47.png"
+]
+const BrainTumorDetection = [
+    "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744199/brainCnn1_phglpm.png",
+    "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744200/brainCnn2_vbefun.png",
+    "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744197/brainCnn3_xcp28s.png",
+    "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744198/brainCnn4_cmtyz4.png",
+    "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744197/brainCnn5_pueu5o.png"
+]
+const BrainTumorDetectionWeb = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744200/webBrain6_grbiwv.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744200/webBrain7_u8xxpw.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744199/webBrain4_bof6w5.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744201/webBrain5_gtufss.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744198/webBrain2_fkf7jc.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744198/webBrain3_m4twlu.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773744197/webBrain1_r77imu.png"
+]
+
 
 
 
@@ -256,6 +286,42 @@ const projects: Project[] = [
     tags: ["sklearn"],
     images: MovieRecommendation,
     githubUrl: "https://github.com/AL-Hourani/movie-recommendation-system",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Product Demand Forecasting Using Machine Learning",
+    description: "This project builds a machine learning system to forecast future product demand based on historical sales data. It uses time series analysis and regression models to learn patterns in product sales and predict future demand. The project includes data preprocessing, exploratory data analysis, visualization using Matplotlib, and training predictive models with Scikit-learn.",
+    tags: ["sklearn"],
+    images: ProductDemandForecasting,
+    githubUrl: "https://github.com/AL-Hourani/product-demand-forecasting",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Brain Tumor Detection with CNN",
+    description: "A deep learning project that classifies brain MRI images into tumor or no tumor categories using a Convolutional Neural Network (CNN). The model preprocesses images, learns important features automatically, and predicts the presence of tumors with high accuracy.",
+    tags: ["Deep Learning"],
+    images:BrainTumorDetection,
+    githubUrl: "https://github.com/AL-Hourani/brain-tumor-detection-cnn",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Brain Tumor Detection Web App",
+    description: "A web application that allows users to upload brain MRI images and uses a trained Convolutional Neural Network (CNN) to automatically detect the presence of brain tumors, providing predictions with confidence scores in real-time.",
+    tags: ["React"],
+    images: BrainTumorDetectionWeb,
+    githubUrl: "https://github.com/AL-Hourani/Brain-Tumor-Detection-Web-App",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Author Identification Using Machine Learning",
+    description: "This project builds a machine learning model that identifies the author of a given text based on writing style. It uses stylometric features such as word frequency, sentence length, and character usage to classify text authors.",
+    tags: ["NLP"],
+    images: AuthorIdentification,
+    githubUrl: "https://github.com/AL-Hourani/author-identification-ml",
     liveUrl: "#",
     status: "live"
   },
@@ -595,16 +661,24 @@ const Projects = () => {
           </p>
 
           <div className="h-1 w-20 bg-github-accent mx-auto mt-4"></div>
-
+          {/* Projects count */}
+      
+        </div>
+        {/* Projects count */}
+        <div className="text-sm text-github-text w-full flex items-center justify-center  my-4 opacity-80 mb-4 text-center md:text-left">
+            Showing {visibleProjects > filteredProjects.length ? filteredProjects.length : visibleProjects} of {filteredProjects.length} projects
         </div>
 
 
    {/* MOBILE FILTER (SELECT) */}
 <div className="mb-10 md:hidden">
 
+
+
   <h3 className="text-sm text-github-text mb-3">
     Filter by Technology
   </h3>
+
   <select
     value={techFilter}
     onChange={(e) => {
