@@ -142,7 +142,19 @@ const Hero = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="bg-github-medium rounded-2xl p-8 shadow-xl">
+          <div className="bg-github-medium rounded-2xl p-4 shadow-xl">
+            {/* PROFILE IMAGE */}
+            <div className="flex justify-center">
+              <div className="p-1 rounded-full bg-gradient-to-r from-purple-500 to-blue-500">
+                <img
+                  src="/public/images/profile.jpg"
+                  alt="Profile"
+                  className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover"
+                />
+              </div>
+            </div>
+
+
 
             <p className="text-github-accent mb-4 font-semibold">
               Tech Stack

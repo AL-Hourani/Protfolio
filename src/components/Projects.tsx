@@ -249,6 +249,11 @@ const BrainTumorDetectionWeb = [
 ]
 
 
+const SpamTextClassification  = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773843128/emailC2_vpoggm.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773843129/emailC1_telj34.png"
+]
+
 
 
 
@@ -331,6 +336,15 @@ const projects: Project[] = [
     tags: ["sklearn"],
     images: ExoplanetDetection,
     githubUrl: "https://github.com/AL-Hourani/exoplanet-detection-ml",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Spam Text Classification Using Machine Learning",
+    description: "The system uses Natural Language Processing techniques to analyze the text and identify patterns commonly found in spam messages.",
+    tags: ["NLP"],
+    images: SpamTextClassification,
+    githubUrl: "https://github.com/AL-Hourani/spam-text-classification",
     liveUrl: "#",
     status: "live"
   },
