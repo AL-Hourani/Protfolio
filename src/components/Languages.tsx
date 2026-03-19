@@ -1,5 +1,4 @@
 
-import { useTranslation } from 'react-i18next';
 import { Languages as LanguagesIcon, Globe, Percent } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
@@ -10,18 +9,17 @@ interface Language {
 }
 
 const Languages = () => {
-  const { t } = useTranslation();
-  
+
   const languages: Language[] = [
     {
-      name: t('languages.arabic'),
+      name: "Arabic",
       level: 100,
-      certificate: t('languages.nativeSpeaker')
+      certificate: "Native"
     },
     {
-      name: t('languages.english'),
+      name: "English",
       level: 85,
-      certificate: 'TOEFL 110/120'
+      certificate: "I'll take the IELTS soon"
     },
 
 
@@ -42,11 +40,11 @@ const Languages = () => {
                   <div className="p-3 rounded-full bg-github-accent/10 text-github-accent">
                     <Globe size={24} />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">{t('languages.title')}</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold"></h2>
                 </div>
                 
                 <p className="text-github-text/80 leading-relaxed">
-                  {t('languages.description')}
+               
                 </p>
                 
                 <div className="h-1 w-16 bg-github-accent mt-4"></div>

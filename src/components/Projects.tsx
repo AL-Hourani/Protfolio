@@ -255,6 +255,19 @@ const SpamTextClassification  = [
 ]
 
 
+const objectDetectionWebApp = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919473/yolo5_a8oxsu.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919473/yolo6_acw5rr.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919470/yolo7_mhgylx.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919470/yolo2_wbslki.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919467/yolo3_sd2938.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919465/yolo1_yhp3kw.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919466/yolo4_anamxk.png"
+]
+const carSales = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919468/carsales2_uwytbl.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919457/carsales1_bmzefo.png"
+]
 
 
 
@@ -291,6 +304,15 @@ const projects: Project[] = [
     tags: ["sklearn"],
     images: MovieRecommendation,
     githubUrl: "https://github.com/AL-Hourani/movie-recommendation-system",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Object Detection Web App ",
+    description: "Web application for object detection using YOLOv8 and Streamlit. Upload an image, detect objects, and visualize results with confidence scores.",
+    tags: ["Computer Vision"],
+    images: objectDetectionWebApp,
+    githubUrl: "https://github.com/AL-Hourani/object-detection-web-app-yolov8",
     liveUrl: "#",
     status: "live"
   },
@@ -427,6 +449,15 @@ const projects: Project[] = [
     tags: ["sklearn"],
     images:CarFuelConsumptionPrediction,
     githubUrl: "https://github.com/AL-Hourani/car-fuel-consumption-prediction",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Car Price Prediction Using Machine Learning",
+    description: "Predict car prices using machine learning based on features such as brand, color, mileage, and number of doors.",
+    tags: ["sklearn"],
+    images:carSales,
+    githubUrl: "https://github.com/AL-Hourani/Car-Price-Prediction",
     liveUrl: "#",
     status: "live"
   },

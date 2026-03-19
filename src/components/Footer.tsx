@@ -73,7 +73,6 @@ const Footer = () => {
                   "Machine Learning",
                   "Frontend Development",
                   "Backend Development",
-                  "UI / UX Design",
                 ].map((service) => (
                   <li key={service}>
                     <a

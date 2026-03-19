@@ -147,7 +147,7 @@ const Hero = () => {
             <div className="flex justify-center">
               <div className="p-1 rounded-full bg-gradient-to-r from-purple-500 to-blue-500">
                 <img
-                  src="/public/images/profile.jpg"
+                  src="../public/images/profile.jpg"
                   alt="Profile"
                   className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover"
                 />
