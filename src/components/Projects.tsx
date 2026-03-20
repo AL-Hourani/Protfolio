@@ -268,7 +268,18 @@ const carSales = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919468/carsales2_uwytbl.png",
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1773919457/carsales1_bmzefo.png"
 ]
+const BackgroundRemoval = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036509/rembg1_mmwasa.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036514/rembg2_vwjho7.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036509/rembg3_cbb3uk.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036514/rembg4_nhpres.png"
+]
 
+const SimpleObjectDetection = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036515/od1_ffdxl8.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036507/od2_dkabpn.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036506/od3_mpb8wm.png"
+]
 
 
 
@@ -322,6 +333,15 @@ const projects: Project[] = [
     tags: ["sklearn"],
     images: ProductDemandForecasting,
     githubUrl: "https://github.com/AL-Hourani/product-demand-forecasting",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Background Removal Web App",
+    description: "AI-powered web app for background removal using U²-Net and Streamlit. Upload images, remove backgrounds, customize new backgrounds, and download results.",
+    tags: ["Deep Learning"],
+    images: BackgroundRemoval,
+    githubUrl: "https://github.com/AL-Hourani/background-removal-web-app",
     liveUrl: "#",
     status: "live"
   },
@@ -596,6 +616,15 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
   },
+  {
+    title: "Simple K-Means Clustering using Scikit-Learn",
+    description: "An introductory implementation of the K-Means clustering algorithm for unsupervised learning, including cluster visualization and interpretation.",
+    tags: ["sklearn"],
+    images: SimpleKMeansClustering,
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
     {
     title: "Support Vector Machine (SVM) using Scikit-Learn",
     description: "A classification model using Support Vector Machines that demonstrates data separation, decision boundaries, and margin visualization.",
@@ -615,10 +644,10 @@ const projects: Project[] = [
     status: "live"
   },
   {
-    title: "Simple Linear Regression using Scikit-Learn",
-    description:"A basic linear regression model that learns relationships between variables and predicts continuous values, with graphical representation of the regression line." ,
-    tags: ["sklearn"],
-    images: SimpleLinearRegression,
+    title: "Simple Object Detection",
+    description:"A Simple Object Detection using YOLOv8 for images and videos" ,
+    tags: ["Computer Vision"],
+    images: SimpleObjectDetection,
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
