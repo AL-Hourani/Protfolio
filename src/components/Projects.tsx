@@ -281,10 +281,27 @@ const SimpleObjectDetection = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774036506/od3_mpb8wm.png"
 ]
 
+const MotionDetectionWeb = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774084268/move1_alt591.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774084269/move3_ehd4wn.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774084268/move2_jmzteq.png"
+]
+
+const ExplainableAIDashboard = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774163733/explainAl4_m52ux8.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774163733/explainAl5_itmfzi.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774163732/explainAl1_jncx3r.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774163732/explainAl3_ln42at.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774163732/explainAl2_knquar.png"
+]
 
 
 
-
+const BiasRadar = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774177476/bias2_cdhkgh.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774177477/bias3_dozb57.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774177476/bias1_duchpw.png"
+]
 
 
 
@@ -333,6 +350,15 @@ const projects: Project[] = [
     tags: ["sklearn"],
     images: ProductDemandForecasting,
     githubUrl: "https://github.com/AL-Hourani/product-demand-forecasting",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Explainable AI Dashboard",
+    description: "An interactive dashboard that visualizes and explains machine learning model predictions using SHAP and LIME, helping users understand feature importance and model behavior.",
+    tags: ["sklearn"],
+    images: ExplainableAIDashboard,
+    githubUrl: "https://github.com/AL-Hourani/xai-model-interpretation-app",
     liveUrl: "#",
     status: "live"
   },
@@ -423,6 +449,15 @@ const projects: Project[] = [
     tags: ["sklearn"],
     images: CreditCardFraud,
     githubUrl: "https://github.com/AL-Hourani/credit-card-fraud-detection",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Bias Radar",
+    description: "A system that detects and visualizes bias in datasets and model predictions using interactive Plotly dashboards.",
+    tags: ["sklearn"],
+    images: BiasRadar,
+    githubUrl: "https://github.com/AL-Hourani/bias-radar-ai",
     liveUrl: "#",
     status: "live"
   },
@@ -630,6 +665,15 @@ const projects: Project[] = [
     description: "A classification model using Support Vector Machines that demonstrates data separation, decision boundaries, and margin visualization.",
     tags: ["sklearn"],
     images: SimpleSupportVectorMachine,
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Motion Detection Web App",
+    description: "Real-time motion detection web app using OpenCV and Streamlit with start/stop control, live video streaming, and automatic recording on motion detection.",
+    tags: ["Computer Vision"],
+    images: MotionDetectionWeb ,
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
