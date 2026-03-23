@@ -70,9 +70,9 @@ const Footer = () => {
               <ul className="space-y-2">
 
                 {[
-                  "Machine Learning",
-                  "Frontend Development",
-                  "Backend Development",
+                  "AI & Machine Learning",
+                  "Data Analysis",
+                  "Full-Stack developer",
                 ].map((service) => (
                   <li key={service}>
                     <a

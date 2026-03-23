@@ -304,6 +304,26 @@ const BiasRadar = [
 ]
 
 
+const MedicalAnomalyDetection = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774207583/nomialy1_qwbckd.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774207583/nomialy2_b3o22v.png"
+]
+
+const ChronicKidneyDisease = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774207583/kidney1_ryzlkb.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774207583/kidney2_tqasrn.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774207583/kidney3_yfrrm4.png"
+]
+
+const DecisionBoundaryin3D = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774207583/bound3d1_xrnweo.png"
+]
+
+const UrbanCrimeIntelligence = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774250372/map1_vibd2k.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774250376/map2_cealug.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774250369/map3_ndmegz.png"
+]
 
 
 type Project = {
@@ -341,6 +361,15 @@ const projects: Project[] = [
     tags: ["Computer Vision"],
     images: objectDetectionWebApp,
     githubUrl: "https://github.com/AL-Hourani/object-detection-web-app-yolov8",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "Urban Crime Intelligence Dashboard",
+    description: "An advanced geospatial dashboard that visualizes real-world crime data using interactive maps, heatmaps, and filtering tools to identify high-risk areas and patterns.",
+    tags: ["Data Analysis"],
+    images: UrbanCrimeIntelligence,
+    githubUrl: "",
     liveUrl: "#",
     status: "live"
   },
@@ -471,6 +500,15 @@ const projects: Project[] = [
     status: "live"
   },
     {
+    title: "Explainable AI for Chronic Kidney Disease (CKD)",
+    description: "A full-stack machine learning system that predicts chronic kidney disease using real clinical data, explains predictions using SHAP, and delivers insights through an interactive Streamlit dashboard.",
+    tags: ["sklearn"],
+    images: ChronicKidneyDisease,
+    githubUrl: "",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
     title: "Simple Semantic Search Engine with Embeddings",
     description: "A system that retrieves documents based on meaning rather than exact keywords by converting text into vector embeddings and measuring semantic similarity",
     tags: ["NLP"],
@@ -597,6 +635,15 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
   },
+    {
+    title: "Medical Anomaly Detection & Patient Risk Monitorin",
+    description: "A real-world system that detects abnormal patient patterns in medical data and continuously monitors risk using unsupervised machine learning and interactive 3D visualizations in a Streamlit dashboard",
+    tags: ["Deep Learning"],
+    images: MedicalAnomalyDetection,
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
    {
     title: "Outlier detection",
     description: "A machine learning system designed to detect abnormal or rare data points in datasets using anomaly detection techniques implemented with Scikit-Learn.",
@@ -652,10 +699,10 @@ const projects: Project[] = [
     status: "live"
   },
   {
-    title: "Simple K-Means Clustering using Scikit-Learn",
-    description: "An introductory implementation of the K-Means clustering algorithm for unsupervised learning, including cluster visualization and interpretation.",
+    title: "Decision Boundary in 3D",
+    description: "An interactive 3D visualization that reveals how a machine learning model separates data by mapping its decision regions across a three-dimensional feature space using Plotly.",
     tags: ["sklearn"],
-    images: SimpleKMeansClustering,
+    images: DecisionBoundaryin3D,
     githubUrl: "#",
     liveUrl: "#",
     status: "live"
