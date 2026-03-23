@@ -325,6 +325,13 @@ const UrbanCrimeIntelligence = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774250369/map3_ndmegz.png"
 ]
 
+const StreamSenseAI = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774256769/stream1_nc937i.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774256776/stream2_atysqc.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774256777/stream3_vroylt.png"
+]
+
+
 
 type Project = {
   title: string;
@@ -415,6 +422,15 @@ const projects: Project[] = [
     tags: ["React"],
     images: BrainTumorDetectionWeb,
     githubUrl: "https://github.com/AL-Hourani/Brain-Tumor-Detection-Web-App",
+    liveUrl: "#",
+    status: "live"
+  },
+    {
+    title: "StreamSense AI: Real-Time Data Monitoring System",
+    description: "A real-time data streaming dashboard that simulates and visualizes live data updates, enabling continuous monitoring and analysis of dynamic systems",
+    tags: ["Data Analysis"],
+    images: StreamSenseAI,
+    githubUrl: "",
     liveUrl: "#",
     status: "live"
   },
