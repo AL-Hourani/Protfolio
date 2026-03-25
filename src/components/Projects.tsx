@@ -331,6 +331,13 @@ const StreamSenseAI = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774256777/stream3_vroylt.png"
 ]
 
+const brainTumorImages = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774423061/brainTomur1_n1s6ki.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774423061/brainTomur2_idgqte.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774423061/brainTomur3_jqnrlh.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774423061/brainTomur4_yrf7si.png"
+]
+
 
 
 type Project = {
@@ -344,6 +351,24 @@ type Project = {
 };
 
 const projects: Project[] = [
+    {
+      title: "Brain Tumor 3D Segmentation",
+      description: "An ongoing research project focused on segmenting brain tumors from 3D MRI scans using deep learning techniques. The goal is to build accurate and robust medical image segmentation models.",
+      tags: ["Deep Learning", "Medical",],
+      images: brainTumorImages, 
+      githubUrl: "#",
+      liveUrl: "#",
+      status: "in-progress"
+    },
+      {
+    title: "Brain Tumor Detection with CNN",
+    description: "A deep learning project that classifies brain MRI images into tumor or no tumor categories using a Convolutional Neural Network (CNN). The model preprocesses images, learns important features automatically, and predicts the presence of tumors with high accuracy.",
+    tags: ["Deep Learning" , "Medical"],
+    images:BrainTumorDetection,
+    githubUrl: "https://github.com/AL-Hourani/brain-tumor-detection-cnn",
+    liveUrl: "#",
+    status: "live"
+   },
     {
     title: "Shopping data clustering for customers",
     description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
@@ -392,7 +417,7 @@ const projects: Project[] = [
     {
     title: "Explainable AI Dashboard",
     description: "An interactive dashboard that visualizes and explains machine learning model predictions using SHAP and LIME, helping users understand feature importance and model behavior.",
-    tags: ["sklearn"],
+    tags: ["sklearn" , "Medical"],
     images: ExplainableAIDashboard,
     githubUrl: "https://github.com/AL-Hourani/xai-model-interpretation-app",
     liveUrl: "#",
@@ -407,15 +432,7 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
   },
-    {
-    title: "Brain Tumor Detection with CNN",
-    description: "A deep learning project that classifies brain MRI images into tumor or no tumor categories using a Convolutional Neural Network (CNN). The model preprocesses images, learns important features automatically, and predicts the presence of tumors with high accuracy.",
-    tags: ["Deep Learning"],
-    images:BrainTumorDetection,
-    githubUrl: "https://github.com/AL-Hourani/brain-tumor-detection-cnn",
-    liveUrl: "#",
-    status: "live"
-  },
+
     {
     title: "Brain Tumor Detection Web App",
     description: "A web application that allows users to upload brain MRI images and uses a trained Convolutional Neural Network (CNN) to automatically detect the presence of brain tumors, providing predictions with confidence scores in real-time.",
@@ -518,7 +535,7 @@ const projects: Project[] = [
     {
     title: "Explainable AI for Chronic Kidney Disease (CKD)",
     description: "A full-stack machine learning system that predicts chronic kidney disease using real clinical data, explains predictions using SHAP, and delivers insights through an interactive Streamlit dashboard.",
-    tags: ["sklearn"],
+    tags: ["sklearn" , "Medical"],
     images: ChronicKidneyDisease,
     githubUrl: "",
     liveUrl: "#",
@@ -654,7 +671,7 @@ const projects: Project[] = [
     {
     title: "Medical Anomaly Detection & Patient Risk Monitorin",
     description: "A real-world system that detects abnormal patient patterns in medical data and continuously monitors risk using unsupervised machine learning and interactive 3D visualizations in a Streamlit dashboard",
-    tags: ["Deep Learning"],
+    tags: ["Deep Learning" , "Medical"],
     images: MedicalAnomalyDetection,
     githubUrl: "#",
     liveUrl: "#",

@@ -29,16 +29,8 @@ const techStack = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
-    name: "TypeScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
     name: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  },
-  {
-    name: "TensorFlow",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
   },
    {
     name: "Golang",
@@ -79,9 +71,8 @@ const Hero = () => {
             </h1>
 
             <p className="text-github-text opacity-80 text-lg max-w-xl">
-              I design and build machine learning systems, modern web
-              applications, and scalable data solutions that transform ideas
-              into powerful digital experiences.
+             I build intelligent systems using Machine Learning and Deep Learning, 
+              with a focus on Medical AI and medical image analysis.
             </p>
 
             {/* Buttons */}

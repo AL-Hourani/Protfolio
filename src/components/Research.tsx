@@ -6,20 +6,19 @@ import { Link } from "react-router-dom";
 const Research = () => {
 
   const researchProjects = [
-    {
-      title: "Multi-Dendrite Learning Neuron",
-      description:
-        "A biologically inspired neuron model where each dendrite learns using a different local learning rule such as Hebbian, Predictive, and Coactivity learning.",
-      icon: Brain,
-      progress: 40,
-      status: "Experimental",
-      links: {
-        paper: "#",
-        code: "#",
-        experiments: "#"
-      }
-    },
-
+{
+  title: "Brain Tumor 3D Segmentation",
+  description:
+    "Currently developing a deep learning system for 3D brain tumor segmentation using medical imaging data (MRI). The project focuses on accurate tumor localization, volumetric analysis, and improving model performance for real-world clinical applications.",
+  icon: Brain,
+  progress: 15,
+  status: "In Progress",
+  links: {
+    paper: "#",
+    code: "#"
+  }
+}
+  
   
 
   ];
@@ -37,9 +36,10 @@ const Research = () => {
           </h2>
 
           <p className="max-w-2xl mx-auto text-github-text opacity-80">
-            Experimental research and scientific explorations focused on
-            biologically inspired artificial intelligence, neural learning
-            mechanisms, and new computational architectures.
+            I am currently working on advanced research in Medical AI, focusing on 
+            medical image analysis and deep learning techniques. My work is in progress, 
+            exploring real-world challenges such as tumor detection, segmentation, and 
+            intelligent diagnostic systems.
           </p>
 
           <div className="h-1 w-24 bg-github-accent mx-auto mt-6"></div>
@@ -106,7 +106,7 @@ const Research = () => {
                   {/* Buttons */}
                   <div className="flex gap-3 pt-2 flex-wrap">
 
-                <Link to="/research/multi-dendrite-neuron">
+                <Link to="#">
                     <Button size="sm" variant="outline">
                       <FileText size={16} className="mr-2" />
                       Paper
