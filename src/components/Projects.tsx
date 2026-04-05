@@ -337,6 +337,10 @@ const brainTumorImages = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774423061/brainTomur3_jqnrlh.png",
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1774423061/brainTomur4_yrf7si.png"
 ]
+const LiverTumorSegmentation = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775392448/liver1_rqcbh5.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775392448/liver2_dfgatb.png"
+]
 
 
 
@@ -369,6 +373,15 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
    },
+    {
+    title: "Deep Learning-Based Liver Tumor Segmentation",
+    description: "A deep learning project using U-Net to segment liver and tumor regions from CT images, combined with 3D visualization for enhanced medical analysis",
+    tags: ["Deep Learning" , "Medical"],
+    images: LiverTumorSegmentation,
+    githubUrl: "https://github.com/AL-Hourani/customer-shopping-clustering",
+    liveUrl: "",
+    status: "live"
+  },
     {
     title: "Shopping data clustering for customers",
     description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
