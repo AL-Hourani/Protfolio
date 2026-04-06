@@ -342,6 +342,11 @@ const LiverTumorSegmentation = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775392448/liver2_dfgatb.png"
 ]
 
+const PelvisSegmentation = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775477544/Pelvis2_jekn4m.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775477542/Pelvis1_dfcobr.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775477545/Pelvi3_dv1eko.png"
+]
 
 
 type Project = {
@@ -381,6 +386,15 @@ const projects: Project[] = [
     githubUrl: "https://github.com/AL-Hourani/customer-shopping-clustering",
     liveUrl: "",
     status: "live"
+  },
+    {
+    title: "Med3D Pelvis Segmentation",
+    description: "A medical imaging project that performs 3D hip bone segmentation from CT scans, combined with interactive and color-enhanced visualization using PyVista.",
+    tags: ["Medical"],
+    images: PelvisSegmentation,
+    githubUrl: "",
+    liveUrl: "",
+    status: "in-progress"
   },
     {
     title: "Shopping data clustering for customers",
