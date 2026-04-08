@@ -348,6 +348,11 @@ const PelvisSegmentation = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775477545/Pelvi3_dv1eko.png"
 ]
 
+const ClinicalDecisionSupport = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775645005/clinicS1_amfx0m.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775645005/clinicS2_yx7emp.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775645006/clinicS3_yuah42.png"
+]
 
 type Project = {
   title: string;
@@ -405,6 +410,15 @@ const projects: Project[] = [
     liveUrl: "",
     status: "live"
   },
+    {
+      title: "Clinical Decision Support Tool for Heart Disease",
+      description: "A machine learning–based application that predicts the risk of heart disease using patient clinical data. The system provides a risk score, classification (low/high risk), and an interactive interface to assist in early medical decision-making.",
+      tags: ["sklearn", "Medical",],
+      images: ClinicalDecisionSupport, 
+      githubUrl: "#",
+      liveUrl: "#",
+      status: "in-progress"
+    },
     {
     title: "Movie Recommendation System",
     description: "Build a collaborative filtering system to suggest movies to users based on their ratings and similarity with other users",
