@@ -354,6 +354,16 @@ const ClinicalDecisionSupport = [
   "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775645006/clinicS3_yuah42.png"
 ]
 
+const SmartClinicalRisk = [
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775719157/smartC2_m72jo8.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775719157/smartC1_sjk1fw.png",
+  "https://res.cloudinary.com/dcfwytnk4/image/upload/v1775719157/smartC3_ecn7dh.png"
+]
+
+
+
+
+
 type Project = {
   title: string;
   description: string;
@@ -417,7 +427,7 @@ const projects: Project[] = [
       images: ClinicalDecisionSupport, 
       githubUrl: "#",
       liveUrl: "#",
-      status: "in-progress"
+      status: "live"
     },
     {
     title: "Movie Recommendation System",
@@ -437,6 +447,15 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
   },
+      {
+      title: "Smart Clinical Risk Dashboard",
+      description: "An interactive medical dashboard that predicts patient risk using machine learning and provides real-time visual insights, alerts, and clinical indicators to support early decision-making.",
+      tags: ["sklearn", "Medical",],
+      images: SmartClinicalRisk , 
+      githubUrl: "#",
+      liveUrl: "#",
+      status: "live"
+    },
     {
     title: "Urban Crime Intelligence Dashboard",
     description: "An advanced geospatial dashboard that visualizes real-world crime data using interactive maps, heatmaps, and filtering tools to identify high-risk areas and patterns.",
