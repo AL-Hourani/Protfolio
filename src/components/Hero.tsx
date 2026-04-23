@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin  , Mail , Microscope} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FileDown } from "lucide-react";
 
@@ -119,6 +119,14 @@ const Hero = () => {
                 className="p-3 rounded-lg bg-github-medium hover:bg-github-accent transition"
               >
                 <Github size={20} />
+              </a>
+              <a
+                href="https://zenodo.org/me/uploads?q=&f=shared_with_me%3Afalse&l=list&p=1&s=10&sort=newest"
+                target="_blank"
+                className="p-3 rounded-lg bg-github-medium hover:bg-github-accent transition"
+              >
+                <span>My Research on Zenodo</span>
+                         
               </a>
 
 
