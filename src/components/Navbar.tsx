@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, X  , Github } from 'lucide-react';
+import { Menu, X  , Github , Mail} from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,6 +74,13 @@ const Navbar = () => {
               </button>
             ))}
             <span className='w-0.5 h-8 rounded-sm bg-slate-300'></span>
+             <a
+                href="mailto:jalhourani3@gmail.com"
+                className=" text-github-text hover:text-github-accent transition"
+              >
+                <Mail size={20} />
+              </a>
+
             <a
                   href="https://github.com/AL-Hourani"
                 target="_blank"
@@ -86,7 +93,12 @@ const Navbar = () => {
 
           {/* Mobile Button */}
           <div className="md:hidden flex gap-6">
-            
+              <a
+                href="mailto:jalhourani3@gmail.com"
+                className=" text-github-text hover:text-github-accent transition"
+              >
+                <Mail size={20} />
+              </a>
 
             <a
               

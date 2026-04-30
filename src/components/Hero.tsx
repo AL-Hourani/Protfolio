@@ -104,40 +104,33 @@ const Hero = () => {
             {/* Social Icons */}
             <div className="flex gap-4 pt-4">
           
+
+
+
+
+
+            </div>
+
                 <a
                   href="/Jaafar_Alhourani_cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                    className="flex px-6 py-3 justify-center gap-4 items-center rounded-lg  bg-github-medium transition"
                 >
-                  <Button className="flex gap-2">
+                 
                     View CV
-                  </Button>
+                
                 </a>
-              <a
-                href="https://github.com/AL-Hourani"
-                target="_blank"
-                className="p-3 rounded-lg bg-github-medium hover:bg-github-accent transition"
-              >
-                <Github size={20} />
-              </a>
-              <a
+               <a
                 href="https://zenodo.org/me/uploads?q=&f=shared_with_me%3Afalse&l=list&p=1&s=10&sort=newest"
                 target="_blank"
-                className="p-3 rounded-lg bg-github-medium hover:bg-github-accent transition"
+                className="flex px-6 py-3 justify-center gap-4 items-center rounded-lg  bg-github-medium transition"
               >
-                <span>My Research on Zenodo</span>
-                         
+                My Research on Zenodo <Microscope size={18} />
+                          
               </a>
+ 
 
-
-              <a
-                href="mailto:jalhourani3@gmail.com"
-                className="p-3 rounded-lg bg-github-medium hover:bg-github-accent transition"
-              >
-                <Mail size={20} />
-              </a>
-
-            </div>
           </div>
 
           {/* RIGHT SIDE */}
