@@ -112,7 +112,7 @@ const Hero = () => {
             </div>
 
                 <a
-                  href="/Jaafar_Alhourani_cv.pdf"
+                  href="/jaafar_alhourani_cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                     className="flex px-6 py-3 justify-center gap-4 items-center rounded-lg  bg-github-medium transition"
