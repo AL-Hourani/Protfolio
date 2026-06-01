@@ -384,6 +384,15 @@ const projects: Project[] = [
       liveUrl: "#",
       status: "in-progress"
     },
+        {
+    title: "California House Price Prediction",
+    description: "Predict house prices in California using features like location, number of bedrooms, population, and median income. Apply Linear Regression or Gradient Boosting.",
+    tags: ["sklearn"],
+    images: CaliforniaHousePrice,
+    githubUrl: "#",
+    liveUrl: "#",
+    status: "live"
+  },
       {
     title: "Brain Tumor Detection with CNN",
     description: "A deep learning project that classifies brain MRI images into tumor or no tumor categories using a Convolutional Neural Network (CNN). The model preprocesses images, learns important features automatically, and predicts the presence of tumors with high accuracy.",
@@ -402,6 +411,15 @@ const projects: Project[] = [
     liveUrl: "",
     status: "live"
   },
+      {
+    title: "Shopping data clustering for customers",
+    description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
+    tags: ["sklearn"],
+    images: ShoppingDataClustering,
+    githubUrl: "https://github.com/AL-Hourani/customer-shopping-clustering",
+    liveUrl: "",
+    status: "live"
+  },
     {
     title: "Med3D Pelvis Segmentation",
     description: "A medical imaging project that performs 3D hip bone segmentation from CT scans, combined with interactive and color-enhanced visualization using PyVista.",
@@ -411,15 +429,7 @@ const projects: Project[] = [
     liveUrl: "",
     status: "in-progress"
   },
-    {
-    title: "Shopping data clustering for customers",
-    description: "An unsupervised machine learning model that analyzes shopping behavior and groups customers into clusters using Scikit-Learn clustering algorithms to discover hidden purchasing patterns.",
-    tags: ["sklearn"],
-    images: ShoppingDataClustering,
-    githubUrl: "https://github.com/AL-Hourani/customer-shopping-clustering",
-    liveUrl: "",
-    status: "live"
-  },
+
     {
       title: "Clinical Decision Support Tool for Heart Disease",
       description: "A machine learning–based application that predicts the risk of heart disease using patient clinical data. The system provides a risk score, classification (low/high risk), and an interactive interface to assist in early medical decision-making.",
@@ -701,15 +711,7 @@ const projects: Project[] = [
     liveUrl: "#",
     status: "live"
   },
-    {
-    title: "California House Price Prediction",
-    description: "Predict house prices in California using features like location, number of bedrooms, population, and median income. Apply Linear Regression or Gradient Boosting.",
-    tags: ["sklearn"],
-    images: CaliforniaHousePrice,
-    githubUrl: "#",
-    liveUrl: "#",
-    status: "live"
-  },
+
   //   {
   //   title: "Spam Email Cassification",
   //   description: "Classify emails as spam or ham using text features. Use NLP techniques like TF-IDF and classifiers like Multinomial Naive Bayes.",

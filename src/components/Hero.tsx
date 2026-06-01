@@ -71,8 +71,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-github-text opacity-80 text-lg max-w-xl">
-             I build intelligent systems using Machine Learning and Deep Learning, 
-              with a focus on Medical AI and medical image analysis.
+             I build intelligent systems using Machine Learning and Deep Learning
             </p>
 
             {/* Buttons */}
