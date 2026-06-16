@@ -1,9 +1,71 @@
 import { Button } from "@/components/ui/button";
 import { FileDown } from "lucide-react";
 
+
 const About = () => {
   return (
     <section id="about" className="py-24 bg-github-darker/50">
+
+      {/* AI Project Demo Section */}
+      <div className="my-20 w-[92%] max-w-6xl mx-auto px-4">
+
+        <h3 className="text-2xl font-bold text-center mb-10 text-github-accent">
+          AI Traffic Analysis Project 
+        </h3>
+
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+
+          {/* Video Card */}
+          <div className="bg-github-medium p-6 h-full rounded-2xl shadow-xl">
+      <video
+        src="https://res.cloudinary.com/dcfwytnk4/video/upload/v1781618143/output_1_ynp6fq.mp4"
+        className="h-full w-full"
+        controls
+        autoPlay
+        muted
+        loop
+      >
+        Your browser does not support the video tag.
+      </video>
+          
+         
+
+
+          </div>
+
+          {/* Description */}
+          <div className="space-y-5">
+
+            <h4 className="text-xl font-semibold text-github-accent">
+              Real-time Vehicle Detection System
+            </h4>
+
+            <p className="opacity-80 leading-relaxed">
+              This project uses YOLOv8 to detect and classify objects in traffic videos.
+              It identifies cars, trucks, buses, and people in real-time and overlays
+              bounding boxes with live counting.
+            </p>
+
+            <div className="space-y-2">
+
+              <p>Vehicle detection (car / truck / bus)</p>
+              <p>Person detection</p>
+              <p>Live counting system</p>
+              <p>Video processing with OpenCV</p>
+
+            </div>
+
+            {/* Button */}
+            <a href="https://res.cloudinary.com/dcfwytnk4/video/upload/v1781618143/output_1_ynp6fq.mp4" download>
+              <button className="mt-4 px-5 py-2 border border-github-accent text-github-accent rounded-lg hover:bg-github-accent hover:text-black transition">
+                Download Result Video
+              </button>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
 
       <div className="w-[92%] max-w-6xl mx-auto px-4">
 
@@ -66,7 +128,7 @@ const About = () => {
 
             {/* Download CV */}
             <div className="pt-6">
-              <a href="/public/jaafar_alhourani_cv.pdf" download = "jaafar_alhourani_cv.pdf">
+              <a href="/Jaafar_Alhourani_CV.pdf" download = "jaafar_alhourani_cv.pdf">
                 <Button
                   variant="outline"
                   className="border-github-accent text-github-accent flex gap-2"
