@@ -62,7 +62,10 @@ const Hero = () => {
           <div className="space-y-6">
 
             <div className="inline-block px-4 py-1 bg-github-medium rounded-full text-github-accent text-sm">
-              AI Engineer • Full Stack Developer
+              AI System Engineer • Full Stack Developer
+            </div>
+            <div className="inline-block px-4 py-1 bg- text-2xl rounded-full text-github-accent text-sm">
+              / Memory is Everything /
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
